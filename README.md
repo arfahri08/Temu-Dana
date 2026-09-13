@@ -2,14 +2,12 @@
 
 <br>
 
-<!-- Project Title — Bold display SVG -->
-<p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=54&duration=99999&pause=99999&color=F4EBDD&background=173F35&center=true&vCenter=true&width=480&height=90&lines=TEMU+DANA" alt="TEMU DANA" />
-</p>
+<!-- Project Title — Capsule Render Hero Banner -->
+<img src="https://capsule-render.vercel.app/api?type=waving&color=173F35&height=200&section=header&text=TEMU%20DANA&fontSize=72&fontColor=F4EBDD&fontAlign=50&fontAlignY=42&animation=fadeIn&desc=Platform%20Pencarian%20Sponsor%20untuk%20Panitia%20Kegiatan&descSize=16&descAlignY=68&descColor=A8C4B0" width="100%" alt="TEMU DANA" />
 
 <!-- Animated Typing SVG tagline -->
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=18&duration=3000&pause=1200&color=71866A&center=true&vCenter=true&width=600&lines=Temukan+Sponsor+yang+Tepat.;Bangun+Kolaborasi+yang+Relevan.;Dukung+Kegiatan%2C+Wujudkan+Ide." alt="Typing animation" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=20&duration=1800&pause=700&color=2F6B4F&center=true&vCenter=true&width=600&lines=Temukan+Sponsor+yang+Tepat.;Bangun+Kolaborasi+yang+Relevan.;Dukung+Kegiatan%2C+Wujudkan+Ide." alt="Typing animation" />
 </p>
 
 <br>
