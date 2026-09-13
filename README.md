@@ -2,12 +2,14 @@
 
 <br>
 
-<!-- Project Title -->
-<h1 align="center" style="font-size: 3rem; letter-spacing: 0.1em;">TEMU DANA</h1>
-
-<!-- Animated Typing SVG -->
+<!-- Project Title — Bold display SVG -->
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Arial&weight=600&size=22&duration=3000&pause=1200&color=173F35&center=true&vCenter=true&width=600&lines=Temukan+Sponsor+yang+Tepat.;Bangun+Kolaborasi+yang+Relevan.;Dukung+Kegiatan%2C+Wujudkan+Ide." alt="Typing animation" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=54&duration=99999&pause=99999&color=F4EBDD&background=173F35&center=true&vCenter=true&width=480&height=90&lines=TEMU+DANA" alt="TEMU DANA" />
+</p>
+
+<!-- Animated Typing SVG tagline -->
+<p align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=18&duration=3000&pause=1200&color=71866A&center=true&vCenter=true&width=600&lines=Temukan+Sponsor+yang+Tepat.;Bangun+Kolaborasi+yang+Relevan.;Dukung+Kegiatan%2C+Wujudkan+Ide." alt="Typing animation" />
 </p>
 
 <br>
