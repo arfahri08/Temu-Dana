@@ -1,30 +1,50 @@
-﻿<!DOCTYPE html><html lang="id"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Profil Pengguna</title><link rel="stylesheet" href="style.css"></head><body>
+<!DOCTYPE html><html lang="id"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Profil Pengguna</title><link rel="stylesheet" href="style.css"></head><body>
 <div class="mobile-app">
   <div class="status-bar">9:41</div>
   <main class="content">
     <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 24px; margin-top: 12px;">
       <h1 class="text-heading" style="font-size: 20px;">Profil Saya</h1>
     </div>
-    
+
     <div style="display: flex; gap: 16px; align-items: center; margin-bottom: 24px;">
       <div class="profile-avatar profile-avatar-large" aria-label="Profil pengguna">
         <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
       </div>
       <div>
-        <h2 class="text-heading" style="font-size: 16px; margin-bottom: 4px;">User Organisasi</h2>
-        <p class="text-body" style="font-size: 12px;">uisi.event@organisasi.ac.id</p>
+        <h2 class="text-heading" style="font-size: 16px; margin-bottom: 4px;" id="display-nama">User Organisasi</h2>
+        <p class="text-body" style="font-size: 12px;" id="display-email">uisi.event@organisasi.ac.id</p>
       </div>
     </div>
     <hr style="border: 0; border-top: 1px solid var(--olive-green); margin-bottom: 24px;">
 
-    <div class="input-group"><label>NAMA ORGANISASI</label><input type="text" value="BEM Universitas" readonly></div>
-    <div class="input-group"><label>KOTA</label><input type="text" value="Bandar Lampung" readonly></div>
-    <div class="input-group"><label>EMAIL</label><input type="text" value="uisi.event@organisasi.ac.id" readonly></div>
+    <form id="profil-form" onsubmit="return false;">
+      <div class="input-group">
+        <label for="nama">NAMA ORGANISASI</label>
+        <input type="text" id="nama" placeholder="Contoh: BEM Universitas" oninput="cekForm()">
+      </div>
+      <div class="input-group">
+        <label for="kota">KOTA</label>
+        <input type="text" id="kota" placeholder="Contoh: Bandar Lampung" oninput="cekForm()">
+      </div>
+      <div class="input-group">
+        <label for="email">EMAIL</label>
+        <input type="email" id="email" placeholder="Contoh: uisi.event@organisasi.ac.id" oninput="cekForm()">
+      </div>
 
-    <a href="index.html" class="btn-primary" style="justify-content: center; margin-top: 24px;">Keluar</a>
+      <button type="submit" class="btn-primary" id="btn-simpan" disabled style="justify-content: center; margin-top: 24px;" onclick="simpanProfil()">
+        <span style="width: 24px;"></span>
+        <span style="flex: 1; text-align: center;">Simpan Profil</span>
+        <span style="font-weight: normal; font-size: 18px;">→</span>
+      </button>
+    </form>
+
+    <div style="text-align: center; margin-top: 20px;">
+      <a href="index.html" class="text-body" style="font-size: 13px; text-decoration: underline;">Keluar</a>
+    </div>
   </main>
+
   <nav class="bottom-nav">
-  <a href="index.html" class="nav-item active">
+  <a href="index.html" class="nav-item">
     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg>
     Beranda
   </a>
@@ -36,9 +56,27 @@
     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
     Riwayat
   </a>
-  <a href="profil.html" class="nav-item">
+  <a href="profil.html" class="nav-item active">
     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
     Profil
   </a>
 </nav>
-</div></body></html>
+</div>
+
+<script>
+  function cekForm() {
+    const nama  = document.getElementById('nama').value.trim();
+    const kota  = document.getElementById('kota').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const btn   = document.getElementById('btn-simpan');
+    btn.disabled = !(nama && kota && email);
+  }
+
+  function simpanProfil() {
+    const nama  = document.getElementById('nama').value.trim();
+    const email = document.getElementById('email').value.trim();
+    document.getElementById('display-nama').textContent  = nama;
+    document.getElementById('display-email').textContent = email;
+  }
+</script>
+</body></html>
