@@ -4,7 +4,7 @@
 
 **Menemukan sponsor yang lebih relevan untuk setiap acara.**
 
-<marquee behavior="alternate" direction="left" scrollamount="3" width="420">PROJECT BY PUA · ISE ACADEMY 2026</marquee>
+<img src="https://readme-typing-svg.demolab.com?font=Poppins&weight=600&size=20&duration=3000&pause=1000&color=173F35&center=true&vCenter=true&width=460&lines=PROJECT+BY+PUA;ISE+ACADEMY+2026" alt="PROJECT BY PUA - ISE ACADEMY 2026" />
 
 *A. Rachman Fahri · Putri Meyka Andini*
 
