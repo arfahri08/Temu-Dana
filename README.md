@@ -2,10 +2,10 @@
 
 <br>
 
-<!-- Project Title — Capsule Render Hero Banner -->
+<!-- Hero Banner -->
 <img src="https://capsule-render.vercel.app/api?type=waving&color=173F35&height=200&section=header&text=TEMU%20DANA&fontSize=72&fontColor=F4EBDD&fontAlign=50&fontAlignY=42&animation=fadeIn&desc=Platform%20Pencarian%20Sponsor%20untuk%20Panitia%20Kegiatan&descSize=16&descAlignY=68&descColor=A8C4B0" width="100%" alt="TEMU DANA" />
 
-<!-- Animated Typing SVG tagline -->
+<!-- Animated Typing Tagline -->
 <p align="center">
   <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=20&duration=1800&pause=700&color=2F6B4F&center=true&vCenter=true&width=600&lines=Temukan+Sponsor+yang+Tepat.;Bangun+Kolaborasi+yang+Relevan.;Dukung+Kegiatan%2C+Wujudkan+Ide." alt="Typing animation" />
 </p>
@@ -24,13 +24,14 @@
 
 <br>
 
-<!-- Badges -->
+<!-- Status & Theme Badges -->
 <p align="center">
   <img src="https://img.shields.io/badge/Status-MVP%20in%20Development-173F35?style=flat-square&labelColor=F4EBDD&color=173F35" alt="Status" />
   <img src="https://img.shields.io/badge/Theme-Community-71866A?style=flat-square&labelColor=F4EBDD&color=71866A" alt="Theme" />
   <img src="https://img.shields.io/badge/Kelompok-PUA-173F35?style=flat-square&labelColor=F4EBDD&color=173F35" alt="Kelompok" />
 </p>
 
+<!-- Tech Badges -->
 <p align="center">
   <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white" alt="HTML5" />
   <img src="https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white" alt="CSS3" />
@@ -49,7 +50,8 @@
 
 ---
 
-## Tentang Proyek
+<!-- Section: Tentang Proyek -->
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=28&duration=1&pause=99999&color=173F35&vCenter=true&width=400&height=50&lines=%F0%9F%93%8C+Tentang+Proyek" alt="Tentang Proyek" />
 
 Temu Dana adalah website yang membantu panitia kegiatan skala kecil–menengah menemukan sponsor yang sesuai dengan karakteristik dan kebutuhan acara mereka.
 
@@ -71,13 +73,15 @@ Temu Dana hadir untuk menjawab masalah itu.
 
 ---
 
-## MVP Features
+<!-- Section: MVP Features -->
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=28&duration=1&pause=99999&color=173F35&vCenter=true&width=400&height=50&lines=%E2%9C%A8+MVP+Features" alt="MVP Features" />
 
 Fokus MVP Temu Dana adalah membuat pencarian sponsor lebih terarah, lebih transparan, dan lebih mudah dipahami.
 
 <br>
 
-### 1 — Event Profile
+<!-- Subheading: Event Profile -->
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&duration=1&pause=99999&color=2F6B4F&vCenter=true&width=400&height=40&lines=1+%E2%80%94+Event+Profile" alt="1 — Event Profile" />
 
 Sebelum mencari sponsor, pengguna mengisi profil acara terlebih dahulu.
 
@@ -91,7 +95,8 @@ Sebelum mencari sponsor, pengguna mengisi profil acara terlebih dahulu.
 
 <br>
 
-### 2 — Sponsor Matching
+<!-- Subheading: Sponsor Matching -->
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&duration=1&pause=99999&color=2F6B4F&vCenter=true&width=400&height=40&lines=2+%E2%80%94+Sponsor+Matching" alt="2 — Sponsor Matching" />
 
 Berdasarkan profil acara, sistem mencocokkan acara dengan daftar sponsor yang tersedia. Pencocokan mempertimbangkan:
 
@@ -103,7 +108,8 @@ Berdasarkan profil acara, sistem mencocokkan acara dengan daftar sponsor yang te
 
 <br>
 
-### 3 — Match Explanation
+<!-- Subheading: Match Explanation -->
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&duration=1&pause=99999&color=2F6B4F&vCenter=true&width=400&height=40&lines=3+%E2%80%94+Match+Explanation" alt="3 — Match Explanation" />
 
 Setiap sponsor yang direkomendasikan ditampilkan beserta **persentase kecocokan** dan alasan yang menjelaskan faktor yang sesuai maupun tidak sesuai.
 
@@ -128,7 +134,8 @@ Fitur ini membantu panitia memahami dasar rekomendasi sebelum memutuskan sponsor
 
 ---
 
-## Cara Kerja
+<!-- Section: Cara Kerja -->
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=28&duration=1&pause=99999&color=173F35&vCenter=true&width=400&height=50&lines=%F0%9F%94%84+Cara+Kerja" alt="Cara Kerja" />
 
 Alur utama dirancang berdasarkan kebutuhan Nadia: menemukan sponsor yang relevan dengan sesedikit mungkin langkah yang tidak perlu.
 
@@ -174,7 +181,8 @@ Matching Result
 
 ---
 
-## Design
+<!-- Section: Design -->
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=28&duration=1&pause=99999&color=173F35&vCenter=true&width=400&height=50&lines=%F0%9F%8E%A8+Design" alt="Design" />
 
 Temu Dana menggunakan pendekatan desain **modern dengan nuansa retro editorial** — tegas, bersih, dan mudah dibaca di berbagai konteks.
 
@@ -185,27 +193,27 @@ Temu Dana menggunakan pendekatan desain **modern dengan nuansa retro editorial**
 <table>
   <tr>
     <td align="center">
-      <img src="https://via.placeholder.com/60x40/173F35/173F35.png" width="60" height="32" alt="" /><br>
+      <img src="https://placehold.co/72x36/173F35/173F35.png" width="72" height="36" alt="Primary" /><br>
       <sub><b>Primary</b></sub><br>
       <sub><code>#173F35</code></sub>
     </td>
     <td align="center">
-      <img src="https://via.placeholder.com/60x40/71866A/71866A.png" width="60" height="32" alt="" /><br>
+      <img src="https://placehold.co/72x36/71866A/71866A.png" width="72" height="36" alt="Secondary" /><br>
       <sub><b>Secondary</b></sub><br>
       <sub><code>#71866A</code></sub>
     </td>
     <td align="center">
-      <img src="https://via.placeholder.com/60x40/F4EBDD/F4EBDD.png" width="60" height="32" alt="" /><br>
+      <img src="https://placehold.co/72x36/F4EBDD/F4EBDD.png" width="72" height="36" alt="Background" /><br>
       <sub><b>Background</b></sub><br>
       <sub><code>#F4EBDD</code></sub>
     </td>
     <td align="center">
-      <img src="https://via.placeholder.com/60x40/2F6B4F/2F6B4F.png" width="60" height="32" alt="" /><br>
+      <img src="https://placehold.co/72x36/2F6B4F/2F6B4F.png" width="72" height="36" alt="Positive" /><br>
       <sub><b>Positive</b></sub><br>
       <sub><code>#2F6B4F</code></sub>
     </td>
     <td align="center">
-      <img src="https://via.placeholder.com/60x40/9B4D32/9B4D32.png" width="60" height="32" alt="" /><br>
+      <img src="https://placehold.co/72x36/9B4D32/9B4D32.png" width="72" height="36" alt="Negative" /><br>
       <sub><b>Negative</b></sub><br>
       <sub><code>#9B4D32</code></sub>
     </td>
@@ -216,9 +224,11 @@ Temu Dana menggunakan pendekatan desain **modern dengan nuansa retro editorial**
 
 ---
 
-## Roadmap
+<!-- Section: Roadmap -->
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=28&duration=1&pause=99999&color=173F35&vCenter=true&width=400&height=50&lines=%F0%9F%9B%A3%EF%B8%8F+Roadmap" alt="Roadmap" />
 
-### Phase 1 — MVP
+<!-- Subheading: Phase 1 -->
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&duration=1&pause=99999&color=2F6B4F&vCenter=true&width=400&height=40&lines=Phase+1+%E2%80%94+MVP" alt="Phase 1 — MVP" />
 
 | # | Fitur | Status |
 |---|---|---|
@@ -228,7 +238,8 @@ Temu Dana menggunakan pendekatan desain **modern dengan nuansa retro editorial**
 
 <br>
 
-### Phase 2 — Trust & Transparency
+<!-- Subheading: Phase 2 -->
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&duration=1&pause=99999&color=71866A&vCenter=true&width=500&height=40&lines=Phase+2+%E2%80%94+Trust+%26+Transparency" alt="Phase 2 — Trust & Transparency" />
 
 > Fitur-fitur berikut **belum tersedia di MVP** dan direncanakan untuk pengembangan selanjutnya.
 
@@ -269,7 +280,8 @@ Manfaat bagi calon sponsor:
 
 ---
 
-## Project Status
+<!-- Section: Project Status -->
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=28&duration=1&pause=99999&color=173F35&vCenter=true&width=400&height=50&lines=%F0%9F%9A%A7+Project+Status" alt="Project Status" />
 
 <div align="center">
 
@@ -287,13 +299,14 @@ Fitur Sponsor Review & Track Record serta Funding Progress adalah bagian dari ro
 
 ---
 
-## Team
+<!-- Section: Team -->
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=28&duration=1&pause=99999&color=173F35&vCenter=true&width=400&height=50&lines=%F0%9F%91%A5+Team" alt="Team" />
 
 <div align="center">
 
 <br>
 
-### PUA
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=22&duration=1&pause=99999&color=71866A&center=true&vCenter=true&width=200&height=40&lines=PUA" alt="PUA" />
 
 <br>
 
@@ -318,9 +331,9 @@ Fitur Sponsor Review & Track Record serta Funding Progress adalah bagian dari ro
 
 ---
 
-<div align="center">
+<img src="https://capsule-render.vercel.app/api?type=waving&color=173F35&height=100&section=footer&fontColor=F4EBDD" width="100%" alt="footer" />
 
-<br>
+<div align="center">
 
 *Temu Dana hadir untuk mempertemukan kebutuhan pendanaan acara*<br>
 *dengan sponsor yang lebih relevan — informatif, transparan, dan terarah.*
