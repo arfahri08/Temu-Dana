@@ -41,11 +41,11 @@
 
   <div class="alert-overlay">
     <div class="alert-box">
-      <button class="close-btn" onclick="this.parentElement.parentElement.style.display='none'">×</button>
+      <button type="button" class="close-btn" id="closeAlert">×</button>
       <h2 class="text-heading" style="font-size: 20px; margin-bottom: 12px;">Sponsor Tidak Cocok</h2>
       <p class="text-body" style="font-size: 13px; margin-bottom: 24px;">Sponsor ini tidak<br>direkomendasikan untuk acaramu.</p>
       <hr style="border: 0; border-top: 1px solid var(--olive-green); margin-bottom: 24px; opacity: 0.3;">
-      <button class="btn-primary" style="justify-content: center;" onclick="this.parentElement.parentElement.style.display='none'">Lihat Detail</button>
+      <button type="button" class="btn-primary" id="closeAlertAction" style="justify-content: center;">Lihat Detail</button>
     </div>
   </div>
   
@@ -58,13 +58,23 @@
     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
     Cari Sponsor
   </a>
-  <a href="#" class="nav-item">
+  <a href="riwayat.html" class="nav-item">
     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
     Riwayat
   </a>
-  <a href="#" class="nav-item">
+  <a href="profil.html" class="nav-item">
     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
     Profil
   </a>
 </nav>
-</div></body></html>
+</div>
+<script>
+  const alertOverlay = document.querySelector('.alert-overlay');
+  const closeAlert = () => {
+    alertOverlay.style.display = 'none';
+  };
+
+  document.getElementById('closeAlert').addEventListener('click', closeAlert);
+  document.getElementById('closeAlertAction').addEventListener('click', closeAlert);
+</script>
+</body></html>
