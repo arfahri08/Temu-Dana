@@ -1,174 +1,334 @@
 <div align="center">
 
-# TEMU DANA
+<br>
 
-**Menemukan sponsor yang lebih relevan untuk setiap acara.**
+<!-- Project Title -->
+<h1 align="center" style="font-size: 3rem; letter-spacing: 0.1em;">TEMU DANA</h1>
 
-<img src="https://readme-typing-svg.demolab.com?font=Poppins&weight=600&size=20&duration=3000&pause=1000&color=173F35&center=true&vCenter=true&width=460&lines=PROJECT+BY+PUA;ISE+ACADEMY+2026" alt="PROJECT BY PUA - ISE ACADEMY 2026" />
+<!-- Animated Typing SVG -->
+<p align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=Arial&weight=600&size=22&duration=3000&pause=1200&color=173F35&center=true&vCenter=true&width=600&lines=Temukan+Sponsor+yang+Tepat.;Bangun+Kolaborasi+yang+Relevan.;Dukung+Kegiatan%2C+Wujudkan+Ide." alt="Typing animation" />
+</p>
 
-*A. Rachman Fahri · Putri Meyka Andini*
+<br>
+
+<!-- Project Identity -->
+<p align="center">
+  <sub>PROJECT BY</sub><br>
+  <strong>PUA</strong>
+</p>
+
+<p align="center">
+  A. Rachman Fahri &nbsp;·&nbsp; Putri Meyka Andini
+</p>
+
+<br>
+
+<!-- Badges -->
+<p align="center">
+  <img src="https://img.shields.io/badge/Status-MVP%20in%20Development-173F35?style=flat-square&labelColor=F4EBDD&color=173F35" alt="Status" />
+  <img src="https://img.shields.io/badge/Theme-Community-71866A?style=flat-square&labelColor=F4EBDD&color=71866A" alt="Theme" />
+  <img src="https://img.shields.io/badge/Kelompok-PUA-173F35?style=flat-square&labelColor=F4EBDD&color=173F35" alt="Kelompok" />
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white" alt="HTML5" />
+  <img src="https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white" alt="CSS3" />
+  <img src="https://img.shields.io/badge/Tailwind_CSS_v4-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white" alt="Tailwind CSS" />
+  <img src="https://img.shields.io/badge/PostCSS-DD3A0A?style=flat-square&logo=postcss&logoColor=white" alt="PostCSS" />
+  <img src="https://img.shields.io/badge/Design-Figma-F24E1E?style=flat-square&logo=figma&logoColor=white" alt="Figma" />
+</p>
+
+<br>
+
+<p align="center">
+  <strong>ISE ACADEMY 2026</strong>
+</p>
 
 </div>
 
-## ABOUT TEMU DANA
+---
 
-Temu Dana adalah website yang membantu panitia kegiatan skala kecil-menengah menemukan sponsor yang sesuai dengan karakteristik dan kebutuhan acara.
+## Tentang Proyek
 
-Kami berangkat dari user persona Nadia, seorang mahasiswa yang menjadi panitia kegiatan kampus dan bertugas mencari sponsor. Nadia belum memiliki banyak jaringan sponsor, kesulitan menentukan sponsor yang cocok, dan harus mencari informasi sponsor secara manual.
+Temu Dana adalah website yang membantu panitia kegiatan skala kecil–menengah menemukan sponsor yang sesuai dengan karakteristik dan kebutuhan acara mereka.
 
-> **Problem statement:** "Panitia kegiatan kesulitan menentukan sponsor yang tepat karena informasi mengenai kriteria dan preferensi sponsor sulit ditemukan."
+Bayangkan **Nadia** — mahasiswa berusia 20 tahun yang baru saja ditunjuk sebagai panitia acara kampus. Ia bertugas mencari sponsor, namun belum memiliki banyak jaringan. Ia tidak tahu harus mulai dari mana. Ia tidak tahu sponsor mana yang relevan. Dan ketika ia menemukan nama perusahaan, ia tidak bisa menjelaskan mengapa perusahaan itu cocok untuk acaranya.
 
-## THE PROBLEM
+Temu Dana hadir untuk menjawab masalah itu.
 
-- Panitia belum memiliki jaringan sponsor yang luas.
-- Sulit mengetahui sponsor mana yang relevan dengan acara.
-- Informasi mengenai kriteria dan preferensi sponsor sulit ditemukan.
-- Panitia harus menghubungi banyak pihak secara acak.
-- Sulit menjelaskan alasan mengapa suatu sponsor dianggap cocok.
+> **Problem Statement**
+>
+> *"Panitia kegiatan kesulitan menentukan sponsor yang tepat karena informasi mengenai kriteria dan preferensi sponsor sulit ditemukan."*
 
-## MVP FEATURES
+**Masalah yang dihadapi:**
 
-Fokus MVP Temu Dana adalah membuat proses pencarian sponsor lebih terarah dan mudah dipahami.
+- Panitia belum memiliki jaringan sponsor yang luas
+- Sulit menentukan sponsor mana yang relevan dengan acara
+- Informasi mengenai kriteria dan preferensi sponsor sulit ditemukan
+- Harus menghubungi banyak pihak secara manual dan acak
+- Tidak ada penjelasan mengapa suatu sponsor dianggap cocok atau tidak
 
-### Event Profile
+---
 
-Pengguna mengisi informasi acara:
+## MVP Features
 
-- Jenis acara
-- Lokasi
+Fokus MVP Temu Dana adalah membuat pencarian sponsor lebih terarah, lebih transparan, dan lebih mudah dipahami.
+
+<br>
+
+### 1 — Event Profile
+
+Sebelum mencari sponsor, pengguna mengisi profil acara terlebih dahulu.
+
+| Field | Keterangan |
+|---|---|
+| Jenis Acara | Kategori acara yang akan diselenggarakan |
+| Lokasi | Kota atau wilayah penyelenggaraan |
+| Target Peserta | Segmen audiens acara |
+| Jumlah Peserta | Perkiraan jumlah peserta yang hadir |
+| Kebutuhan Dana | Estimasi dana yang dibutuhkan dari sponsor |
+
+<br>
+
+### 2 — Sponsor Matching
+
+Berdasarkan profil acara, sistem mencocokkan acara dengan daftar sponsor yang tersedia. Pencocokan mempertimbangkan:
+
+- Kategori acara
 - Target peserta
-- Jumlah peserta
-- Kebutuhan dana
+- Lokasi penyelenggaraan
+- Kebutuhan sponsorship
+- Karakteristik acara
 
-### Sponsor Matching
+<br>
 
-Sistem memberikan beberapa rekomendasi sponsor berdasarkan karakteristik dan kebutuhan acara.
+### 3 — Match Explanation
 
-### Match Explanation
+Setiap sponsor yang direkomendasikan ditampilkan beserta **persentase kecocokan** dan alasan yang menjelaskan faktor yang sesuai maupun tidak sesuai.
 
-Setiap rekomendasi sponsor menampilkan persentase kecocokan dan alasan yang menjelaskan faktor yang sesuai maupun tidak sesuai.
-
-Contoh hasil:
-
-```text
+```
 90% Kecocokan
-✓ Target peserta sesuai
-✓ Jenis acara sesuai
-✓ Lokasi sesuai
-✓ Sesuai kebutuhan acara
 
-✕ Kebutuhan sponsor tidak sesuai
-✕ Jenis acara kurang sesuai
+  ✓  Target peserta sesuai
+  ✓  Jenis acara sesuai
+  ✓  Lokasi sesuai
+  ✓  Sesuai kebutuhan acara
 ```
 
-Tujuannya adalah membantu panitia memahami dasar rekomendasi sebelum menentukan sponsor yang layak untuk dihubungi.
+```
+40% Kecocokan
 
-## USER FLOW
-
-```text
-Home
-  → Event Profile
-  → Isi informasi acara
-  → Cari Sponsor
-  → Matching Result
-  → Melihat rekomendasi dan persentase kecocokan
-  → Sponsor Detail
-  → Memilih sponsor
+  ✓  Target peserta sesuai
+  ✕  Kebutuhan sponsor tidak sesuai
+  ✕  Jenis acara kurang sesuai
 ```
 
-Jika belum ditemukan sponsor yang relevan:
+Fitur ini membantu panitia memahami dasar rekomendasi sebelum memutuskan sponsor yang layak untuk dihubungi — bukan sekadar daftar nama tanpa konteks.
 
-```text
+---
+
+## Cara Kerja
+
+Alur utama dirancang berdasarkan kebutuhan Nadia: menemukan sponsor yang relevan dengan sesedikit mungkin langkah yang tidak perlu.
+
+```
+┌─────────────┐
+│    Home     │
+└──────┬──────┘
+       │
+       ▼
+┌──────────────────┐
+│  Event Profile   │  ← Isi informasi acara
+└──────┬───────────┘
+       │
+       ▼
+┌──────────────────┐
+│   Cari Sponsor   │
+└──────┬───────────┘
+       │
+       ▼
+┌──────────────────────┐
+│   Matching Result    │  ← Rekomendasi + persentase kecocokan
+└──────┬───────────────┘
+       │
+       ▼
+┌──────────────────┐
+│  Sponsor Detail  │  ← Lihat detail dan alasan kecocokan
+└──────┬───────────┘
+       │
+       ▼
+┌──────────────────┐
+│  Pilih Sponsor   │
+└──────────────────┘
+```
+
+Jika tidak ditemukan sponsor yang relevan:
+
+```
 Matching Result
-  → Tidak ada sponsor yang sesuai
-  → Pengguna mengubah kriteria acara
-  → Melakukan pencarian kembali
+  └──→ Tidak ada sponsor yang sesuai
+         └──→ Ubah kriteria acara
+                └──→ Cari kembali
 ```
 
-## FUTURE DEVELOPMENT / ROADMAP
+---
 
-Fitur-fitur di bawah ini **belum tersedia di MVP** dan direncanakan untuk pengembangan berikutnya.
+## Design
 
-### Sponsor Review & Track Record
+Temu Dana menggunakan pendekatan desain **modern dengan nuansa retro editorial** — tegas, bersih, dan mudah dibaca di berbagai konteks.
 
-Setelah sebuah project atau acara selesai, pihak pemberi dana atau sponsor dapat memberikan ulasan terhadap panitia atau pengada acara.
+<br>
 
-Track record ini nantinya dapat membantu calon pemberi dana melihat:
+**Color System**
 
-- Apakah panitia bertanggung jawab terhadap project sebelumnya?
-- Apakah project benar-benar diselesaikan?
-- Bagaimana pengalaman pemberi dana sebelumnya?
-- Apakah benefit atau bentuk kerja sama yang diberikan sesuai kesepakatan?
+<table>
+  <tr>
+    <td align="center">
+      <img src="https://via.placeholder.com/60x40/173F35/173F35.png" width="60" height="32" alt="" /><br>
+      <sub><b>Primary</b></sub><br>
+      <sub><code>#173F35</code></sub>
+    </td>
+    <td align="center">
+      <img src="https://via.placeholder.com/60x40/71866A/71866A.png" width="60" height="32" alt="" /><br>
+      <sub><b>Secondary</b></sub><br>
+      <sub><code>#71866A</code></sub>
+    </td>
+    <td align="center">
+      <img src="https://via.placeholder.com/60x40/F4EBDD/F4EBDD.png" width="60" height="32" alt="" /><br>
+      <sub><b>Background</b></sub><br>
+      <sub><code>#F4EBDD</code></sub>
+    </td>
+    <td align="center">
+      <img src="https://via.placeholder.com/60x40/2F6B4F/2F6B4F.png" width="60" height="32" alt="" /><br>
+      <sub><b>Positive</b></sub><br>
+      <sub><code>#2F6B4F</code></sub>
+    </td>
+    <td align="center">
+      <img src="https://via.placeholder.com/60x40/9B4D32/9B4D32.png" width="60" height="32" alt="" /><br>
+      <sub><b>Negative</b></sub><br>
+      <sub><code>#9B4D32</code></sub>
+    </td>
+  </tr>
+</table>
 
-Fitur ini diharapkan dapat membangun trust antara panitia dan calon sponsor serta mengurangi keraguan sebelum pemberian dana.
+**Typography:** Arial
 
-### Funding Progress / Dana Terkumpul
+---
 
-Fitur ini akan menampilkan perkembangan dana yang sudah terkumpul dibandingkan dengan target dana acara.
-
-```text
-Target Dana:     Rp10.000.000
-Dana Terkumpul:  Rp7.500.000
-Progress:        75%
-```
-
-Manfaatnya bagi calon pemberi dana:
-
-- Mengetahui apakah target dana acara sudah hampir tercapai.
-- Mengetahui berapa dana yang masih dibutuhkan.
-- Membantu mempertimbangkan apakah perlu ikut memberikan dana.
-- Memberikan gambaran kondisi pendanaan project secara lebih transparan.
-
-## ROADMAP
+## Roadmap
 
 ### Phase 1 — MVP
 
-- ✓ Event Profile
-- ✓ Sponsor Matching
-- ✓ Match Explanation
+| # | Fitur | Status |
+|---|---|---|
+| 1 | Event Profile | ✅ Done |
+| 2 | Sponsor Matching | ✅ Done |
+| 3 | Match Explanation | ✅ Done |
+
+<br>
 
 ### Phase 2 — Trust & Transparency
 
-- ○ Sponsor Review & Track Record
-- ○ Funding Progress
+> Fitur-fitur berikut **belum tersedia di MVP** dan direncanakan untuk pengembangan selanjutnya.
 
-### Phase 3 — Future Development
+<br>
 
-- Integrasi komunikasi antara panitia dan calon sponsor.
-- Penyempurnaan rekomendasi berdasarkan data pencarian sebelumnya.
-- Dashboard sederhana untuk memantau status kerja sama.
+**○ Sponsor Review & Track Record**
 
-## TECH STACK
+Setelah sebuah acara selesai, pihak pemberi dana dapat memberikan ulasan terhadap panitia. Ulasan ini membentuk track record yang bisa dilihat oleh calon sponsor berikutnya.
 
-Stack di bawah ini dapat disesuaikan dengan implementasi final project:
+Informasi yang akan tersedia:
 
-- **Frontend:** [isi sesuai project]
-- **Backend:** [isi sesuai project]
-- **Database:** [isi sesuai project]
-- **Design:** Figma
-- **Development:** [isi sesuai project]
+- Apakah project sebelumnya benar-benar diselesaikan?
+- Apakah panitia bertanggung jawab terhadap komitmen yang sudah dibuat?
+- Apakah benefit sponsor diberikan sesuai kesepakatan?
+- Bagaimana pengalaman pemberi dana sebelumnya?
+- Bagaimana kualitas pelaksanaan project secara keseluruhan?
 
-## PROJECT STATUS
+Fitur ini bertujuan membangun **trust** antara panitia dan calon sponsor — mengurangi keraguan sebelum keputusan pendanaan dibuat.
 
-> 🚧 **MVP in Development**
+<br>
 
-Project saat ini berfokus pada MVP. Fitur Sponsor Review & Track Record serta Funding Progress merupakan bagian dari roadmap dan belum tersedia sebagai fitur MVP.
+**○ Funding Progress**
 
-## TEAM
+Fitur ini menampilkan perkembangan dana yang sudah terkumpul dibandingkan target, secara real-time dan transparan.
+
+```
+Target Dana      Rp 10.000.000
+Dana Terkumpul   Rp  7.500.000
+Progress         ████████████░░░░  75%
+```
+
+Manfaat bagi calon sponsor:
+
+- Mengetahui apakah target dana hampir tercapai
+- Mengetahui berapa dana yang masih dibutuhkan
+- Membantu mempertimbangkan apakah perlu ikut berkontribusi
+- Memberikan gambaran kondisi pendanaan yang lebih transparan
+
+---
+
+## Project Status
+
+<div align="center">
+
+<br>
+
+🚧 &nbsp; **MVP in Development**
+
+<br>
+
+</div>
+
+Project saat ini berfokus pada pengembangan MVP yang membantu panitia menemukan sponsor yang relevan melalui tiga fitur utama: Event Profile, Sponsor Matching, dan Match Explanation.
+
+Fitur Sponsor Review & Track Record serta Funding Progress adalah bagian dari roadmap Phase 2 dan **belum tersedia di MVP**.
+
+---
+
+## Team
+
+<div align="center">
+
+<br>
 
 ### PUA
 
-- **A. Rachman Fahri**
-- **Putri Meyka Andini**
+<br>
 
-## CLOSING
+<table>
+  <tr>
+    <td align="center" width="200">
+      <br>
+      <b>A. Rachman Fahri</b>
+      <br><br>
+    </td>
+    <td align="center" width="200">
+      <br>
+      <b>Putri Meyka Andini</b>
+      <br><br>
+    </td>
+  </tr>
+</table>
 
-Temu Dana hadir untuk membantu mempertemukan kebutuhan pendanaan acara dengan sponsor yang lebih relevan, sekaligus membangun proses sponsorship yang lebih informatif dan transparan.
+<br>
+
+</div>
 
 ---
 
 <div align="center">
 
-**PUA · ISE ACADEMY 2026**
+<br>
+
+*Temu Dana hadir untuk mempertemukan kebutuhan pendanaan acara*<br>
+*dengan sponsor yang lebih relevan — informatif, transparan, dan terarah.*
+
+<br>
+
+**PUA &nbsp;·&nbsp; ISE ACADEMY 2026**
+
+<br>
 
 </div>
