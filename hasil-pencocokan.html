@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html><html lang="id"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Hasil Pencocokan</title><link rel="stylesheet" href="style.css"></head><body>
+<div class="mobile-app">
+  <div class="status-bar">9:41</div>
+  <main class="content">
+    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px; margin-top: 12px;">
+      <a href="profil-acara.html" style="font-size: 20px; color: var(--forest-green); text-decoration: none;">←</a>
+      <h1 class="text-heading" style="font-size: 20px;">Hasil Pencocokan</h1>
+    </div>
+    <p class="text-body" style="margin-bottom: 24px;">3 sponsor paling relevan untuk acara kamu.</p>
+
+    <!-- Card BCA -->
+    <a href="detail-bca.html" class="card card-hover">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+        <div style="display: flex; gap: 12px; align-items: center;">
+          <div style="width: 48px; height: 48px; border: 1px solid var(--olive-green); border-radius: 12px; background: white; display:flex; align-items:center; justify-content:center; padding: 6px; overflow: hidden;">
+            <img src="assets/bca.svg" alt="BCA" style="width: 100%; height: 100%; object-fit: contain;">
+          </div>
+          <div><h3 class="text-heading" style="font-size: 13px; margin-bottom:2px; text-transform:uppercase; white-space: nowrap;">BANK CENTRAL ASIA</h3><p class="text-body" style="font-size: 12px;">Keuangan</p></div>
+        </div>
+        <span class="badge bg-sangat-cocok">Sangat Cocok</span>
+      </div>
+      <hr style="border: 0; border-top: 1px solid var(--olive-green); margin-bottom: 12px;">
+      <ul class="list-check">
+        <li class="pos"><span>✓</span> Target peserta sesuai</li>
+        <li class="pos"><span>✓</span> Jenis acara sesuai</li>
+        <li class="pos" style="justify-content: space-between;"><span>✓ Lokasi sesuai</span> <span style="color: var(--forest-green); font-weight: bold;">Detail →</span></li>
+      </ul>
+    </a>
+    
+    <!-- Card RG -->
+    <a href="detail-bca.html" class="card card-hover">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+        <div style="display: flex; gap: 12px; align-items: center;">
+          <div style="width: 48px; height: 48px; border: 1px solid var(--olive-green); border-radius: 12px; background: white; display:flex; align-items:center; justify-content:center; padding: 6px; overflow: hidden;">
+            <img src="assets/ruangguru.svg" alt="Ruang Guru" style="width: 100%; height: 100%; object-fit: contain;">
+          </div>
+          <div><h3 class="text-heading" style="font-size: 13px; margin-bottom:2px; text-transform:uppercase; white-space: nowrap;">RUANG GURU</h3><p class="text-body" style="font-size: 12px;">Bimbingan Belajar</p></div>
+        </div>
+        <span class="badge bg-cocok">Cocok</span>
+      </div>
+      <hr style="border: 0; border-top: 1px solid var(--olive-green); margin-bottom: 12px;">
+      <ul class="list-check">
+        <li class="pos"><span>✓</span> Jenis acara sesuai</li>
+        <li class="pos" style="justify-content: space-between;"><span>✓ Target peserta sesuai</span> <span style="color: var(--forest-green); font-weight: bold;">Detail →</span></li>
+      </ul>
+    </a>
+    
+    <!-- Card SIG -->
+    <a href="detail-sig.html" class="card card-hover">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+        <div style="display: flex; gap: 12px; align-items: center;">
+          <div style="width: 48px; height: 48px; border: 1px solid var(--olive-green); border-radius: 12px; background: white; display:flex; align-items:center; justify-content:center; padding: 6px; overflow: hidden;">
+            <img src="assets/sig.svg" alt="SIG" style="width: 100%; height: 100%; object-fit: contain;">
+          </div>
+          <div><h3 class="text-heading" style="font-size: 13px; margin-bottom:2px; text-transform:uppercase; white-space: nowrap;">SEMEN INDONESIA GRUP</h3><p class="text-body" style="font-size: 12px;">Material Bangunan</p></div>
+        </div>
+        <span class="badge bg-tidak-cocok">Tidak Cocok</span>
+      </div>
+      <hr style="border: 0; border-top: 1px solid var(--olive-green); margin-bottom: 12px;">
+      <ul class="list-check">
+        <li class="neg"><span>✕</span> Kebutuhan sponsor tidak sesuai</li>
+        <li class="neg" style="justify-content: space-between;"><span>✕ Jenis acara kurang sesuai</span> <span style="color: var(--forest-green); font-weight: bold;">Detail →</span></li>
+      </ul>
+    </a>
+  </main>
+  <nav class="bottom-nav">
+  <a href="index.html" class="nav-item">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg>
+    Beranda
+  </a>
+  <a href="profil-acara.html" class="nav-item active">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+    Cari Sponsor
+  </a>
+  <a href="#" class="nav-item">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+    Riwayat
+  </a>
+  <a href="#" class="nav-item">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+    Profil
+  </a>
+</nav>
+</div></body></html>

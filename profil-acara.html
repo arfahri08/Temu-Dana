@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html><html lang="id"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Profil Acara</title><link rel="stylesheet" href="style.css"></head><body>
+<div class="mobile-app">
+  <div class="status-bar">9:41</div>
+  <main class="content">
+    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px; margin-top: 12px;">
+      <a href="index.html" style="font-size: 20px; color: var(--forest-green); text-decoration: none;">←</a>
+      <h1 class="text-heading" style="font-size: 20px;">Profil Acara</h1>
+    </div>
+    <p class="text-body" style="margin-bottom: 24px;">Lengkapi informasi acara untuk menemukan sponsor.</p>
+    
+    <div class="input-group"><label>JENIS ACARA</label><input type="text" class="form-input" placeholder="Seminar / Workshop"></div>
+    <div class="input-group"><label>LOKASI</label><input type="text" class="form-input" placeholder="Bandar Lampung"></div>
+    <div class="input-group"><label>TARGET PESERTA</label><input type="text" class="form-input" placeholder="Mahasiswa"></div>
+    <div class="input-group"><label>JUMLAH PESERTA</label><input type="text" class="form-input" placeholder="300"></div>
+    <div class="input-group"><label>KEBUTUHAN DANA</label><input type="text" class="form-input" placeholder="Rp10.000.000"></div>
+    
+    <button type="button" id="btnCariSponsor" class="btn-primary" disabled style="margin-top: 24px;">
+      <span style="width: 24px;"></span>
+      <span style="flex: 1; text-align: center;">Cari Sponsor</span>
+      <span style="font-weight: normal; font-size: 18px;">→</span>
+    </button>
+    
+    <div style="background: rgba(227, 219, 203, 0.5); border: 1px solid var(--olive-green); border-radius: 12px; padding: 16px; margin-top: 24px;">
+      <p class="text-heading" style="font-size: 10px; margin-bottom: 8px;">TIPS</p>
+      <p class="text-body" style="font-size: 12px;">Lengkapi profil agar hasil matching lebih relevan dengan kebutuhan acara.</p>
+    </div>
+  </main>
+  <nav class="bottom-nav">
+  <a href="index.html" class="nav-item">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg>
+    Beranda
+  </a>
+  <a href="profil-acara.html" class="nav-item active">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+    Cari Sponsor
+  </a>
+  <a href="#" class="nav-item">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+    Riwayat
+  </a>
+  <a href="#" class="nav-item">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+    Profil
+  </a>
+</nav>
+</div>
+
+<script>
+  const inputs = document.querySelectorAll('.form-input');
+  const btnCari = document.getElementById('btnCariSponsor');
+
+  function validateForm() {
+    let allFilled = true;
+    inputs.forEach(input => {
+      if (input.value.trim() === '') {
+        allFilled = false;
+      }
+    });
+
+    if (allFilled) {
+      btnCari.removeAttribute('disabled');
+    } else {
+      btnCari.setAttribute('disabled', 'true');
+    }
+  }
+
+  inputs.forEach(input => {
+    input.addEventListener('input', validateForm);
+  });
+
+  btnCari.addEventListener('click', function() {
+    if (!this.hasAttribute('disabled')) {
+      window.location.href = 'hasil-pencocokan.html';
+    }
+  });
+</script>
+</body></html>
