@@ -1,33 +1,33 @@
-﻿<!DOCTYPE html><html lang="id"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Detail Sponsor</title><link rel="stylesheet" href="style.css"></head><body>
+<!DOCTYPE html><html lang="id"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Detail Sponsor</title><link rel="stylesheet" href="style.css"></head><body>
 <div class="mobile-app">
   <div class="status-bar">9:41</div>
   <main class="content">
-    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 24px; margin-top: 12px;">
-      <a href="hasil-pencocokan.html" style="font-size: 20px; color: var(--forest-green); text-decoration: none;">←</a><h1 class="text-heading" style="font-size: 20px;">Detail Sponsor</h1>
-    </div>
+    <header class="page-header" style="margin-bottom: 24px;">
+      <a href="hasil-pencocokan.html" class="back-btn" aria-label="Kembali ke Hasil Pencocokan">←</a><h1 class="text-heading page-title">Detail Sponsor</h1>
+    </header>
     
-    <div style="display: flex; gap: 16px; align-items: center; margin-bottom: 24px;">
-      <div style="width: 80px; height: 80px; border: 1px solid var(--olive-green); border-radius: 16px; background: white; display:flex; align-items:center; justify-content:center; padding: 10px; overflow: hidden;">
-        <img src="assets/sig.svg" alt="SIG" style="width: 100%; height: 100%; object-fit: contain;">
+    <section class="sponsor-header sponsor-detail-hero">
+      <div class="sponsor-logo-lg">
+        <img src="assets/sig.svg" alt="SIG">
       </div>
       <div>
         <h2 class="text-heading" style="font-size: 16px; margin-bottom: 4px;">Semen Indonesia Grup</h2>
         <p class="text-body" style="font-size: 12px; margin-bottom: 8px;">Material Bangunan</p>
         <span class="badge bg-tidak-cocok">0% Kecocokan</span>
       </div>
-    </div>
-    <hr style="border: 0; border-top: 1px solid var(--olive-green); margin-bottom: 24px;">
+    </section>
+    <hr class="divider">
 
-    <h3 class="text-heading" style="font-size: 12px; margin-bottom: 8px; text-transform: uppercase;">Deskripsi Fokus Sponsor</h3>
+    <h3 class="text-heading detail-section-title">Deskripsi Fokus Sponsor</h3>
     <p class="text-body" style="margin-bottom: 24px;">Sponsor bergerak di bidang material bangunan dan mendukung kegiatan yang memiliki kesesuaian dengan fokus industri serta kebutuhan sponsor.</p>
     
-    <div style="border: 1px solid var(--olive-green); border-radius: 12px; padding: 16px; margin-bottom: 24px;">
-      <div style="display: flex; justify-content: space-between; margin-bottom: 12px;"><span class="text-body">Industri Fokus</span><span class="text-heading" style="font-size: 12px;">Material Bangunan</span></div>
-      <div style="display: flex; justify-content: space-between; margin-bottom: 12px;"><span class="text-body">Lokasi Sasaran</span><span class="text-heading" style="font-size: 12px;">Nasional</span></div>
-      <div style="display: flex; justify-content: space-between;"><span class="text-body">Pendanaan</span><span class="text-heading" style="font-size: 12px;">Menyesuaikan</span></div>
+    <div class="spec-box">
+      <div class="spec-row"><span class="spec-label">Industri Fokus</span><span class="spec-value">Material Bangunan</span></div>
+      <div class="spec-row"><span class="spec-label">Lokasi Sasaran</span><span class="spec-value">Nasional</span></div>
+      <div class="spec-row"><span class="spec-label">Pendanaan</span><span class="spec-value">Menyesuaikan</span></div>
     </div>
 
-    <h3 class="text-heading" style="font-size: 12px; margin-bottom: 8px; text-transform: uppercase;">Alasan Kecocokan</h3>
+    <h3 class="text-heading detail-section-title">Alasan Kecocokan</h3>
     <ul class="list-check" style="margin-bottom: 40px;">
       <li class="pos"><span>✓</span> Target peserta sesuai</li>
       <li class="neg"><span>✕</span> Kebutuhan sponsor tidak sesuai</li>
@@ -35,8 +35,8 @@
     </ul>
 
     <p class="text-heading" style="font-size: 10px; color: var(--not-fit-text); text-align: center; margin-bottom: 8px;">Sponsor ini tidak direkomendasikan</p>
-    <button class="btn-primary" disabled style="justify-content: center; margin-bottom: 12px;">Pilih Sponsor</button>
-    <a href="index.html" class="btn-primary" style="justify-content: center;">Kembali ke Beranda</a>
+    <button class="btn-primary btn-center" disabled style="margin-bottom: 12px;">Pilih Sponsor</button>
+    <a href="index.html" class="btn-primary btn-center">Kembali ke Beranda</a>
   </main>
 
   <div class="alert-overlay">

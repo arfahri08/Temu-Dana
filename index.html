@@ -1,43 +1,51 @@
-﻿<!DOCTYPE html><html lang="id"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Temu Dana - Beranda</title><link rel="stylesheet" href="style.css"></head><body>
+<!DOCTYPE html><html lang="id"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Temu Dana - Beranda</title><link rel="stylesheet" href="style.css"></head><body>
 <div class="mobile-app">
   <div class="status-bar">9:41</div>
-  <main class="content">
-    <header style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px; margin-top: 12px;">
-      <h1 class="text-heading" style="font-size: 20px;">Temu Dana</h1>
-      <div class="profile-avatar profile-avatar-small" aria-label="Profil pengguna">
+  <header class="app-header">
+    <div class="page-header page-header-between">
+      <h1 class="text-heading page-title">Temu Dana</h1>
+      <a href="profil.html" class="profile-avatar profile-avatar-small" aria-label="Profil pengguna">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-      </div>
-    </header>
-    <hr style="border: 0; border-top: 1px solid var(--olive-green); margin-bottom: 32px;">
-    
+      </a>
+    </div>
+    <hr class="divider-sm">
+  </header>
+
+  <main class="content">
     <section class="card">
-      <p class="text-heading" style="font-size: 10px; letter-spacing: 1px; margin-bottom: 12px; text-transform: uppercase;">Temukan Sponsor</p>
-      <h2 class="text-heading" style="font-size: 34px; line-height: 1.1; margin-bottom: 16px;">Cari sponsor<br>untuk acaramu.</h2>
+      <p class="section-tag">Temukan Sponsor</p>
+      <h2 class="text-heading hero-title">Cari sponsor<br>untuk acaramu.</h2>
       <p class="text-body" style="margin-bottom: 24px;">Isi karakteristik acara dan temukan sponsor yang paling sesuai.</p>
       <a href="profil-acara.html" class="btn-primary">
         <span style="width: 24px;"></span>
         <span style="flex: 1; text-align: center;">Buat Pencarian Event</span>
-        <span style="font-weight: normal; font-size: 18px;">→</span>
+        <span>→</span>
       </a>
     </section>
 
     <section>
-      <h3 class="text-heading" style="font-size: 18px; margin-bottom: 4px;">Pencarian sebelumnya</h3>
-      <p class="text-body" style="font-size: 12px; margin-bottom: 16px;">Lanjutkan pencarian yang pernah dibuat</p>
+      <h2 class="text-heading section-title">Pencarian sebelumnya</h2>
+      <p class="text-body section-desc">Lanjutkan pencarian yang pernah dibuat</p>
       
-      <div class="card card-hover" style="padding: 16px; display: flex; align-items: center; gap: 16px; margin-bottom: 12px;">
-        <div style="background-color: var(--match-bg); padding: 12px; border-radius: 8px; font-weight: bold; font-size: 12px; color: var(--olive-green);">EV</div>
-        <div style="flex: 1;"><h4 class="text-heading" style="font-size: 14px; margin-bottom: 4px;">Webinar Tech Startup 2026</h4><p class="text-body" style="font-size: 11px;">Sains & Teknologi · Jakarta</p></div>
+      <a href="hasil-pencocokan.html" class="card card-hover history-item">
+        <div class="event-avatar">EV</div>
+        <div class="history-info"><h3 class="text-heading history-title">Webinar Tech Startup 2026</h3><p class="text-body history-meta">Sains & Teknologi · Jakarta</p></div>
         <div class="list-card-arrow">›</div>
-      </div>
+      </a>
       
-      <div class="card card-hover" style="padding: 16px; display: flex; align-items: center; gap: 16px;">
-        <div style="background-color: var(--match-bg); padding: 12px; border-radius: 8px; font-weight: bold; font-size: 12px; color: var(--olive-green);">EV</div>
-        <div style="flex: 1;"><h4 class="text-heading" style="font-size: 14px; margin-bottom: 4px;">Konser Amal Mahasiswa</h4><p class="text-body" style="font-size: 11px;">Seni & Musik · Bandung</p></div>
+      <a href="hasil-pencocokan.html" class="card card-hover history-item">
+        <div class="event-avatar">EV</div>
+        <div class="history-info"><h3 class="text-heading history-title">Konser Amal Mahasiswa</h3><p class="text-body history-meta">Seni & Musik · Bandung</p></div>
         <div class="list-card-arrow">›</div>
-      </div>
+      </a>
     </section>
   </main>
+
+  <footer class="app-footer">
+    <p class="footer-title">Temu Dana</p>
+    <p class="footer-desc">Platform pencarian sponsor untuk kegiatan mahasiswa dan komunitas.</p>
+    <p class="footer-copy">&copy; 2026 PUA · ISE! Academy 2026</p>
+  </footer>
   <nav class="bottom-nav">
   <a href="index.html" class="nav-item active">
     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg>

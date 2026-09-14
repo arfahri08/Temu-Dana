@@ -2,28 +2,30 @@
 <div class="mobile-app">
   <div class="status-bar">9:41</div>
   <main class="content">
-    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px; margin-top: 12px;">
-      <a href="index.html" style="font-size: 20px; color: var(--forest-green); text-decoration: none;">←</a>
-      <h1 class="text-heading" style="font-size: 20px;">Profil Acara</h1>
-    </div>
+    <header class="page-header">
+      <a href="index.html" class="back-btn" aria-label="Kembali ke Beranda">←</a>
+      <h1 class="text-heading page-title">Profil Acara</h1>
+    </header>
     <p class="text-body" style="margin-bottom: 24px;">Lengkapi informasi acara untuk menemukan sponsor.</p>
     
-    <div class="input-group"><label>JENIS ACARA</label><input type="text" class="form-input" placeholder="Seminar / Workshop"></div>
-    <div class="input-group"><label>LOKASI</label><input type="text" class="form-input" placeholder="Bandar Lampung"></div>
-    <div class="input-group"><label>TARGET PESERTA</label><input type="text" class="form-input" placeholder="Mahasiswa"></div>
-    <div class="input-group"><label>JUMLAH PESERTA</label><input type="text" class="form-input" placeholder="300"></div>
-    <div class="input-group"><label>KEBUTUHAN DANA</label><input type="text" class="form-input" placeholder="Rp10.000.000"></div>
+    <form id="formProfilAcara" onsubmit="return false;">
+      <div class="input-group"><label>JENIS ACARA</label><input type="text" class="form-input" placeholder="Seminar / Workshop"></div>
+      <div class="input-group"><label>LOKASI</label><input type="text" class="form-input" placeholder="Bandar Lampung"></div>
+      <div class="input-group"><label>TARGET PESERTA</label><input type="text" class="form-input" placeholder="Mahasiswa"></div>
+      <div class="input-group"><label>JUMLAH PESERTA</label><input type="text" class="form-input" placeholder="300"></div>
+      <div class="input-group"><label>KEBUTUHAN DANA</label><input type="text" class="form-input" placeholder="Rp10.000.000"></div>
+      
+      <button type="button" id="btnCariSponsor" class="btn-primary" disabled style="margin-top: 24px;">
+        <span style="width: 24px;"></span>
+        <span style="flex: 1; text-align: center;">Cari Sponsor</span>
+        <span>→</span>
+      </button>
+    </form>
     
-    <button type="button" id="btnCariSponsor" class="btn-primary" disabled style="margin-top: 24px;">
-      <span style="width: 24px;"></span>
-      <span style="flex: 1; text-align: center;">Cari Sponsor</span>
-      <span style="font-weight: normal; font-size: 18px;">→</span>
-    </button>
-    
-    <div style="background: rgba(227, 219, 203, 0.5); border: 1px solid var(--olive-green); border-radius: 12px; padding: 16px; margin-top: 24px;">
-      <p class="text-heading" style="font-size: 10px; margin-bottom: 8px;">TIPS</p>
-      <p class="text-body" style="font-size: 12px;">Lengkapi profil agar hasil matching lebih relevan dengan kebutuhan acara.</p>
-    </div>
+    <section class="tips-box">
+      <p class="tips-tag">TIPS</p>
+      <p class="tips-text">Lengkapi profil agar hasil matching lebih relevan dengan kebutuhan acara.</p>
+    </section>
   </main>
   <nav class="bottom-nav">
   <a href="index.html" class="nav-item">

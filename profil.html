@@ -2,11 +2,11 @@
 <div class="mobile-app">
   <div class="status-bar">9:41</div>
   <main class="content">
-    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 24px; margin-top: 12px;">
-      <h1 class="text-heading" style="font-size: 20px;">Profil Saya</h1>
-    </div>
+    <header class="page-header" style="margin-bottom: 24px;">
+      <h1 class="text-heading page-title">Profil Saya</h1>
+    </header>
 
-    <div style="display: flex; gap: 16px; align-items: center; margin-bottom: 24px;">
+    <section class="profile-summary">
       <div class="profile-avatar profile-avatar-large" aria-label="Profil pengguna">
         <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
       </div>
@@ -14,8 +14,8 @@
         <h2 class="text-heading" style="font-size: 16px; margin-bottom: 4px;" id="display-nama">User Organisasi</h2>
         <p class="text-body" style="font-size: 12px;" id="display-email">uisi.event@organisasi.ac.id</p>
       </div>
-    </div>
-    <hr style="border: 0; border-top: 1px solid var(--olive-green); margin-bottom: 24px;">
+    </section>
+    <hr class="divider">
 
     <form id="profil-form" onsubmit="return false;">
       <div class="input-group">

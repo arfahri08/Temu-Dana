@@ -2,22 +2,24 @@
 <div class="mobile-app">
   <div class="status-bar">9:41</div>
   <main class="content">
-    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px; margin-top: 12px;">
-      <h1 class="text-heading" style="font-size: 20px;">Riwayat Pencarian</h1>
-    </div>
+    <header class="page-header">
+      <h1 class="text-heading page-title">Riwayat Pencarian</h1>
+    </header>
     <p class="text-body" style="margin-bottom: 24px;">Daftar pencarian sponsor yang pernah kamu buat.</p>
     
-    <a href="hasil-pencocokan.html" class="card card-hover" style="padding: 16px; display: flex; align-items: center; gap: 16px; margin-bottom: 12px; text-decoration: none;">
-      <div style="background-color: var(--match-bg); padding: 12px; border-radius: 8px; font-weight: bold; font-size: 12px; color: var(--olive-green);">EV</div>
-      <div style="flex: 1;"><h4 class="text-heading" style="font-size: 14px; margin-bottom: 4px;">Webinar Tech Startup 2026</h4><p class="text-body" style="font-size: 11px;">Sains & Teknologi · Jakarta</p></div>
-      <div class="list-card-arrow">›</div>
-    </a>
-    
-    <a href="hasil-pencocokan.html" class="card card-hover" style="padding: 16px; display: flex; align-items: center; gap: 16px; text-decoration: none;">
-      <div style="background-color: var(--match-bg); padding: 12px; border-radius: 8px; font-weight: bold; font-size: 12px; color: var(--olive-green);">EV</div>
-      <div style="flex: 1;"><h4 class="text-heading" style="font-size: 14px; margin-bottom: 4px;">Konser Amal Mahasiswa</h4><p class="text-body" style="font-size: 11px;">Seni & Musik · Bandung</p></div>
-      <div class="list-card-arrow">›</div>
-    </a>
+    <section class="history-list">
+      <a href="hasil-pencocokan.html" class="card card-hover history-item">
+        <div class="event-avatar">EV</div>
+        <div class="history-info"><h2 class="text-heading history-title">Webinar Tech Startup 2026</h2><p class="text-body history-meta">Sains & Teknologi · Jakarta</p></div>
+        <div class="list-card-arrow">›</div>
+      </a>
+      
+      <a href="hasil-pencocokan.html" class="card card-hover history-item">
+        <div class="event-avatar">EV</div>
+        <div class="history-info"><h2 class="text-heading history-title">Konser Amal Mahasiswa</h2><p class="text-body history-meta">Seni & Musik · Bandung</p></div>
+        <div class="list-card-arrow">›</div>
+      </a>
+    </section>
   </main>
   <nav class="bottom-nav">
   <a href="index.html" class="nav-item">

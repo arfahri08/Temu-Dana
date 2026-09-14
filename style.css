@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
+/* ==========================================================================
+   1. COLOR PALETTE & CSS VARIABLES
+   ========================================================================== */
 :root {
   --forest-green: #173F35;
   --olive-green: #71866A;
@@ -11,37 +14,576 @@
   --not-fit-text: #9B4D32;
   --bg-main: #F4EBDD;
 }
-* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif !important; }
-body { background: var(--bg-main); display: flex; justify-content: center; min-height: 100vh; }
-.mobile-app { width: 100%; max-width: 412px; min-height: 100vh; background-color: var(--bg-main); position: relative; display: flex; flex-direction: column; }
-.profile-avatar { border: 1.5px solid var(--forest-green); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--forest-green); background: white; }
-.profile-avatar-small { width: 36px; height: 36px; }
-.profile-avatar-large { width: 64px; height: 64px; }
-.status-bar { padding: 14px 24px 0 24px; font-size: 11px; color: var(--olive-green); font-weight: bold; }
-.content { flex: 1; padding: 20px 24px 100px 24px; overflow-y: auto; }
-.text-heading { font-weight: bold; color: var(--forest-green); }
-.text-body { color: var(--olive-green); font-size: 14px; }
-.card { background: white; border: 1px solid var(--olive-green); border-radius: 16px; padding: 16px; margin-bottom: 16px; display: block; text-decoration: none; color: inherit; }
-.card-hover:hover { opacity: 0.9; cursor: pointer; }
-.btn-primary { position: relative; background: var(--forest-green); color: white; border: none; padding: 18px 56px 18px 24px; border-radius: 12px; font-weight: bold; width: 100%; display: flex; justify-content: center; align-items: center; cursor: pointer; text-decoration: none; font-size: 14px; margin-top: 8px; }
-.btn-primary > span:last-child { position: absolute; right: 24px; }
-.list-card-arrow { margin-left: auto; flex: 0 0 auto; color: var(--olive-green); font-size: 18px; font-weight: bold; }
-.btn-primary:disabled { background: #9EAC99; cursor: not-allowed; opacity: 0.7; }
-.bottom-nav { position: fixed; bottom: 0; width: 100%; max-width: 412px; background: var(--bg-main); border-top: 1px solid var(--olive-green); display: flex; justify-content: space-around; padding: 16px 0 24px 0; z-index: 10; }
-.nav-item { text-decoration: none; color: var(--olive-green); font-size: 10px; display: flex; flex-direction: column; align-items: center; gap: 6px; }
-.nav-item.active { color: var(--forest-green) !important; font-weight: bold; }
-.badge { padding: 6px 12px; border-radius: 16px; font-weight: bold; font-size: 11px; display: inline-block; white-space: nowrap; }
-.bg-sangat-cocok { background: var(--match-bg); color: var(--match-green); }
-.bg-cocok { background: var(--fit-bg); color: var(--fit-text); }
-.bg-tidak-cocok { background: var(--not-fit-bg); color: var(--not-fit-text); }
-.list-check { list-style: none; display: flex; flex-direction: column; gap: 10px; margin-top: 16px; font-size: 12px; }
-.list-check li { display: flex; gap: 8px; align-items: center; }
-.list-check li.pos { color: var(--match-green); }
-.list-check li.neg { color: var(--not-fit-text); }
-.input-group { margin-bottom: 18px; }
-.input-group label { display: block; font-size: 10px; font-weight: bold; color: var(--forest-green); margin-bottom: 8px; text-transform: uppercase; }
-.input-group input, .input-group select { width: 100%; padding: 14px 16px; border: 1px solid var(--olive-green); border-radius: 8px; background: transparent; color: var(--forest-green); font-size: 14px; appearance: none; }
-.input-group input::placeholder { color: var(--olive-green); opacity: 0.6; }
-.alert-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); display: flex; justify-content: center; align-items: center; padding: 24px; z-index: 50; }
-.alert-box { background: #F8F5EE; padding: 32px 24px; border-radius: 20px; border: 1px solid var(--forest-green); width: 100%; max-width: 350px; text-align: center; position: relative; }
-.close-btn { position: absolute; top: 16px; right: 16px; background: none; border: none; font-size: 20px; font-weight: bold; color: var(--forest-green); cursor: pointer; }
+
+/* ==========================================================================
+   2. GLOBAL RESET & TYPOGRAPHY
+   ========================================================================== */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, button, input, select, textarea {
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  background: var(--bg-main);
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.text-heading {
+  font-weight: 700;
+  color: var(--forest-green);
+  line-height: 1.2;
+}
+
+.text-body {
+  color: var(--olive-green);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.section-tag {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--forest-green);
+  margin-bottom: 12px;
+}
+
+.hero-title {
+  font-size: 34px;
+  line-height: 1.1;
+  margin-bottom: 16px;
+}
+
+.section-title {
+  font-size: 18px;
+  margin-bottom: 4px;
+}
+
+.section-desc {
+  font-size: 12px;
+  margin-bottom: 16px;
+}
+
+/* ==========================================================================
+   3. CONTAINER & LAYOUT
+   ========================================================================== */
+.mobile-app {
+  width: 100%;
+  max-width: 412px;
+  min-height: 100vh;
+  background-color: var(--bg-main);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.status-bar {
+  padding: 14px 24px 0 24px;
+  font-size: 11px;
+  color: var(--olive-green);
+  font-weight: 700;
+}
+
+.app-header {
+  padding: 12px 24px 0 24px;
+}
+
+.content {
+  flex: 1;
+  padding: 20px 24px 100px 24px;
+  overflow-y: auto;
+}
+
+.page-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 12px;
+  margin-bottom: 16px;
+}
+
+.page-header-between {
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.page-title {
+  font-size: 20px;
+}
+
+.back-btn {
+  font-size: 20px;
+  color: var(--forest-green);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  line-height: 1;
+}
+
+.divider {
+  border: 0;
+  border-top: 1px solid var(--olive-green);
+  margin-bottom: 24px;
+}
+
+.divider-sm {
+  border: 0;
+  border-top: 1px solid var(--olive-green);
+  margin-bottom: 12px;
+}
+
+/* ==========================================================================
+   4. AVATARS & PROFILES
+   ========================================================================== */
+.profile-avatar {
+  border: 1.5px solid var(--forest-green);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--forest-green);
+  background: white;
+  text-decoration: none;
+}
+
+.profile-avatar-small {
+  width: 36px;
+  height: 36px;
+}
+
+.profile-avatar-large {
+  width: 64px;
+  height: 64px;
+}
+
+.profile-summary {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+/* ==========================================================================
+   5. CARDS & LIST ITEMS
+   ========================================================================== */
+.card {
+  background: white;
+  border: 1px solid var(--olive-green);
+  border-radius: 16px;
+  padding: 16px;
+  margin-bottom: 16px;
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.card-hover:hover {
+  opacity: 0.92;
+  cursor: pointer;
+}
+
+.history-item {
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 12px;
+  text-decoration: none;
+}
+
+.event-avatar {
+  background-color: var(--match-bg);
+  padding: 12px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 12px;
+  color: var(--olive-green);
+  flex-shrink: 0;
+}
+
+.history-info {
+  flex: 1;
+}
+
+.history-title {
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.history-meta {
+  font-size: 11px;
+}
+
+.list-card-arrow {
+  margin-left: auto;
+  flex: 0 0 auto;
+  color: var(--olive-green);
+  font-size: 18px;
+  font-weight: 700;
+}
+
+/* Sponsor List & Details */
+.sponsor-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.sponsor-brand {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.sponsor-logo {
+  width: 48px;
+  height: 48px;
+  border: 1px solid var(--olive-green);
+  border-radius: 12px;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.sponsor-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.sponsor-logo-lg {
+  width: 80px;
+  height: 80px;
+  border: 1px solid var(--olive-green);
+  border-radius: 16px;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.sponsor-logo-lg img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.sponsor-name {
+  font-size: 13px;
+  margin-bottom: 2px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.sponsor-category {
+  font-size: 12px;
+}
+
+.sponsor-detail-hero {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.spec-box {
+  border: 1px solid var(--olive-green);
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 24px;
+}
+
+.spec-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.spec-row:last-child {
+  margin-bottom: 0;
+}
+
+.spec-label {
+  color: var(--olive-green);
+  font-size: 14px;
+}
+
+.spec-value {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--forest-green);
+}
+
+.detail-section-title {
+  font-size: 12px;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.tips-box {
+  background: rgba(227, 219, 203, 0.5);
+  border: 1px solid var(--olive-green);
+  border-radius: 12px;
+  padding: 16px;
+  margin-top: 24px;
+}
+
+.tips-tag {
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--forest-green);
+  margin-bottom: 8px;
+}
+
+.tips-text {
+  font-size: 12px;
+  color: var(--olive-green);
+  line-height: 1.5;
+}
+
+/* ==========================================================================
+   6. BUTTONS
+   ========================================================================== */
+.btn-primary {
+  position: relative;
+  background: var(--forest-green);
+  color: white;
+  border: none;
+  padding: 18px 56px 18px 24px;
+  border-radius: 12px;
+  font-weight: 700;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 14px;
+  margin-top: 8px;
+  line-height: 1.2;
+}
+
+.btn-primary > span:last-child {
+  position: absolute;
+  right: 24px;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.btn-center {
+  justify-content: center;
+  padding: 18px 24px;
+}
+
+.btn-primary:disabled {
+  background: #9EAC99;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+/* ==========================================================================
+   7. NAVIGATION & FOOTER
+   ========================================================================== */
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  max-width: 412px;
+  background: var(--bg-main);
+  border-top: 1px solid var(--olive-green);
+  display: flex;
+  justify-content: space-around;
+  padding: 16px 0 24px 0;
+  z-index: 10;
+}
+
+.nav-item {
+  text-decoration: none;
+  color: var(--olive-green);
+  font-size: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.nav-item.active {
+  color: var(--forest-green);
+  font-weight: 700;
+}
+
+.app-footer {
+  padding: 16px 24px;
+  text-align: center;
+  margin-bottom: 74px;
+  border-top: 1px solid rgba(113, 134, 106, 0.25);
+}
+
+.footer-title {
+  font-weight: 700;
+  font-size: 12px;
+  color: var(--forest-green);
+  margin-bottom: 4px;
+}
+
+.footer-desc {
+  font-size: 11px;
+  color: var(--olive-green);
+  margin-bottom: 6px;
+  line-height: 1.4;
+}
+
+.footer-copy {
+  font-size: 10px;
+  color: var(--olive-green);
+  opacity: 0.8;
+}
+
+/* ==========================================================================
+   8. BADGES & CHECKLISTS
+   ========================================================================== */
+.badge {
+  padding: 6px 12px;
+  border-radius: 16px;
+  font-weight: 700;
+  font-size: 11px;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.bg-sangat-cocok {
+  background: var(--match-bg);
+  color: var(--match-green);
+}
+
+.bg-cocok {
+  background: var(--fit-bg);
+  color: var(--fit-text);
+}
+
+.bg-tidak-cocok {
+  background: var(--not-fit-bg);
+  color: var(--not-fit-text);
+}
+
+.list-check {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 16px;
+  font-size: 12px;
+}
+
+.list-check li {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.list-check li.pos {
+  color: var(--match-green);
+}
+
+.list-check li.neg {
+  color: var(--not-fit-text);
+}
+
+.list-check-spaced {
+  justify-content: space-between;
+}
+
+.detail-link {
+  color: var(--forest-green);
+  font-weight: 700;
+}
+
+/* ==========================================================================
+   9. INPUTS & FORMS
+   ========================================================================== */
+.input-group {
+  margin-bottom: 18px;
+}
+
+.input-group label {
+  display: block;
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--forest-green);
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.input-group input,
+.input-group select {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid var(--olive-green);
+  border-radius: 8px;
+  background: transparent;
+  color: var(--forest-green);
+  font-size: 14px;
+  appearance: none;
+}
+
+.input-group input::placeholder {
+  color: var(--olive-green);
+  opacity: 0.6;
+}
+
+/* ==========================================================================
+   10. ALERTS & MODALS
+   ========================================================================== */
+.alert-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+  z-index: 50;
+}
+
+.alert-box {
+  background: #F8F5EE;
+  padding: 32px 24px;
+  border-radius: 20px;
+  border: 1px solid var(--forest-green);
+  width: 100%;
+  max-width: 350px;
+  text-align: center;
+  position: relative;
+}
+
+.close-btn {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: none;
+  border: none;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--forest-green);
+  cursor: pointer;
+}
