@@ -14,60 +14,12 @@
       <a href="profil-acara.html" class="back-btn" aria-label="Kembali ke Profil Acara">←</a>
       <h1 class="text-heading page-title">Hasil Pencocokan</h1>
     </header>
-    <p class="text-body page-desc">3 sponsor paling relevan untuk acara kamu.</p>
+    <p class="text-body page-desc" id="matchingSummary">Memuat hasil pencocokan...</p>
 
-    <section class="sponsor-list">
-      <a href="detail-bca.html" class="card card-hover">
-        <div class="sponsor-card-top">
-          <div class="sponsor-brand">
-            <div class="sponsor-logo">
-              <img src="assets/bca.svg" alt="BCA">
-            </div>
-            <div><h2 class="text-heading sponsor-name">BANK CENTRAL ASIA</h2><p class="text-body sponsor-category">Keuangan</p></div>
-          </div>
-          <span class="badge bg-sangat-cocok">Sangat Cocok</span>
-        </div>
-        <hr class="divider-sm">
-        <ul class="list-check">
-          <li class="pos"><span>✓</span> Target peserta sesuai</li>
-          <li class="pos"><span>✓</span> Jenis acara sesuai</li>
-          <li class="pos list-check-spaced"><span>✓ Lokasi sesuai</span> <span class="detail-link">Detail →</span></li>
-        </ul>
-      </a>
-      
-      <a href="detail-rg.html" class="card card-hover">
-        <div class="sponsor-card-top">
-          <div class="sponsor-brand">
-            <div class="sponsor-logo">
-              <img src="assets/ruangguru.svg" alt="Ruang Guru">
-            </div>
-            <div><h2 class="text-heading sponsor-name">RUANG GURU</h2><p class="text-body sponsor-category">Bimbingan Belajar</p></div>
-          </div>
-          <span class="badge bg-cocok">Cocok</span>
-        </div>
-        <hr class="divider-sm">
-        <ul class="list-check">
-          <li class="pos"><span>✓</span> Jenis acara sesuai</li>
-          <li class="pos list-check-spaced"><span>✓ Target peserta sesuai</span> <span class="detail-link">Detail →</span></li>
-        </ul>
-      </a>
-      
-      <a href="detail-sig.html" class="card card-hover">
-        <div class="sponsor-card-top">
-          <div class="sponsor-brand">
-            <div class="sponsor-logo">
-              <img src="assets/sig.svg" alt="SIG">
-            </div>
-            <div><h2 class="text-heading sponsor-name">SEMEN INDONESIA GRUP</h2><p class="text-body sponsor-category">Material Bangunan</p></div>
-          </div>
-          <span class="badge bg-tidak-cocok">Tidak Cocok</span>
-        </div>
-        <hr class="divider-sm">
-        <ul class="list-check">
-          <li class="neg"><span>✕</span> Kebutuhan sponsor tidak sesuai</li>
-          <li class="neg list-check-spaced"><span>✕ Jenis acara kurang sesuai</span> <span class="detail-link">Detail →</span></li>
-        </ul>
-      </a>
+    <section class="sponsor-list" id="matchingResults" aria-live="polite"></section>
+    <section class="matching-empty" id="emptyMatching" hidden>
+      <p>Belum menemukan sponsor yang cukup sesuai.<br>Coba ubah kriteria acara.</p>
+      <a href="profil-acara.html" class="btn-primary">Ubah Kriteria</a>
     </section>
   </main>
   <footer class="app-footer">

@@ -23,14 +23,16 @@
           <option value="">Pilih jenis acara</option>
           <option value="seminar">Seminar</option>
           <option value="workshop">Workshop</option>
-          <option value="kompetisi">Kompetisi</option>
-          <option value="konser">Konser</option>
+          <option value="competition">Kompetisi</option>
+          <option value="social">Kegiatan Sosial</option>
+          <option value="festival">Festival</option>
+          <option value="concert">Konser</option>
         </select>
         <p class="error-message" id="error-jenis-acara"></p>
       </div>
       <div class="input-group">
         <label for="lokasi">LOKASI</label>
-        <input type="text" id="lokasi" name="lokasi" class="form-input" placeholder="Bandar Lampung" required minlength="3" maxlength="60" pattern="[A-Za-zÀ-ÿ .'-]{3,60}" title="Gunakan 3–60 karakter berupa huruf, spasi, titik, apostrof, atau tanda hubung.">
+        <input type="text" id="lokasi" name="lokasi" class="form-input" placeholder="Bandar Lampung" required minlength="3" maxlength="60" pattern="[A-Za-zÀ-ÿ .'\-]{3,60}" title="Gunakan 3–60 karakter berupa huruf, spasi, titik, apostrof, atau tanda hubung.">
         <p class="error-message" id="error-lokasi"></p>
       </div>
       <div class="input-group">

@@ -24,6 +24,156 @@ function hapusError(id) {
   error.textContent = '';
 }
 
+function normalisasi(nilai) {
+  return String(nilai).trim().toLowerCase();
+}
+
+function hitungKecocokan(sponsor, profilAcara) {
+  const jenisCocok = sponsor.eventTypes.map(normalisasi).includes(normalisasi(profilAcara.eventType));
+  const targetCocok = sponsor.targetAudience.map(normalisasi).includes(normalisasi(profilAcara.targetAudience));
+  const lokasiCocok = sponsor.locations.map(normalisasi).includes(normalisasi(profilAcara.location));
+  const pesertaCocok = profilAcara.participants >= sponsor.minParticipants
+    && profilAcara.participants <= sponsor.maxParticipants;
+  const danaCocok = profilAcara.funding >= sponsor.fundingRange.min
+    && profilAcara.funding <= sponsor.fundingRange.max;
+
+  const faktor = [
+    { cocok: jenisCocok, bobot: 30, sesuai: 'Jenis acara sesuai', tidak: 'Jenis acara tidak sesuai' },
+    { cocok: targetCocok, bobot: 25, sesuai: 'Target peserta sesuai', tidak: 'Target peserta tidak sesuai' },
+    { cocok: lokasiCocok, bobot: 20, sesuai: 'Lokasi sesuai', tidak: 'Lokasi tidak sesuai' },
+    { cocok: pesertaCocok, bobot: 15, sesuai: 'Jumlah peserta sesuai', tidak: 'Jumlah peserta tidak sesuai' },
+    { cocok: danaCocok, bobot: 10, sesuai: 'Kebutuhan dana sesuai', tidak: 'Kebutuhan dana tidak sesuai' }
+  ];
+
+  let score = 0;
+  const reasons = faktor.map(function (item) {
+    if (item.cocok) {
+      score += item.bobot;
+    }
+
+    return {
+      matched: item.cocok,
+      text: item.cocok ? item.sesuai : item.tidak
+    };
+  });
+
+  return { ...sponsor, score, reasons };
+}
+
+function buatInisial(nama) {
+  return nama.split(' ').slice(0, 2).map(function (kata) {
+    return kata.charAt(0);
+  }).join('').toUpperCase();
+}
+
+function buatKartuSponsor(hasil) {
+  const card = document.createElement('article');
+  card.className = 'card card-hover';
+
+  const cardTop = document.createElement('div');
+  cardTop.className = 'sponsor-card-top';
+
+  const brand = document.createElement('div');
+  brand.className = 'sponsor-brand';
+
+  const logo = document.createElement('div');
+  logo.className = 'sponsor-logo';
+
+  if (hasil.logo) {
+    const image = document.createElement('img');
+    image.src = hasil.logo;
+    image.alt = hasil.name;
+    logo.appendChild(image);
+  } else {
+    logo.classList.add('sponsor-logo-initials');
+    logo.textContent = buatInisial(hasil.name);
+  }
+
+  const identity = document.createElement('div');
+  const name = document.createElement('h2');
+  name.className = 'text-heading sponsor-name';
+  name.textContent = hasil.name;
+  const category = document.createElement('p');
+  category.className = 'text-body sponsor-category';
+  category.textContent = hasil.category;
+  identity.append(name, category);
+  brand.append(logo, identity);
+
+  const score = document.createElement('span');
+  score.className = 'badge';
+  score.classList.add(hasil.score >= 75 ? 'bg-sangat-cocok' : hasil.score >= 50 ? 'bg-cocok' : 'bg-tidak-cocok');
+  score.textContent = `${hasil.score}% Kecocokan`;
+  cardTop.append(brand, score);
+
+  const divider = document.createElement('hr');
+  divider.className = 'divider-sm';
+
+  const reasonList = document.createElement('ul');
+  reasonList.className = 'list-check';
+  hasil.reasons.forEach(function (reason) {
+    const item = document.createElement('li');
+    item.className = reason.matched ? 'pos' : 'neg';
+    const icon = document.createElement('span');
+    icon.textContent = reason.matched ? '✓' : '✕';
+    item.append(icon, document.createTextNode(reason.text));
+    reasonList.appendChild(item);
+  });
+
+  const footer = document.createElement('div');
+  footer.className = 'sponsor-card-footer';
+  const link = document.createElement('a');
+  link.className = 'detail-link';
+  link.href = hasil.detailPage || `mailto:${hasil.contact}`;
+  link.textContent = hasil.detailPage ? 'Detail →' : 'Hubungi →';
+  footer.appendChild(link);
+
+  card.append(cardTop, divider, reasonList, footer);
+  return card;
+}
+
+function tampilkanHasilMatching() {
+  const resultContainer = document.getElementById('matchingResults');
+  const summary = document.getElementById('matchingSummary');
+  const emptyState = document.getElementById('emptyMatching');
+
+  if (!resultContainer || !summary || !emptyState) {
+    return;
+  }
+
+  const savedResults = sessionStorage.getItem('matchingResults');
+  resultContainer.replaceChildren();
+
+  if (!savedResults) {
+    summary.textContent = 'Belum ada profil acara untuk dicocokkan.';
+    emptyState.hidden = false;
+    return;
+  }
+
+  let matchingResults;
+  try {
+    matchingResults = JSON.parse(savedResults).filter(function (hasil) {
+      return hasil.score >= 40;
+    });
+  } catch (error) {
+    sessionStorage.removeItem('matchingResults');
+    summary.textContent = 'Data hasil pencocokan tidak dapat dibaca.';
+    emptyState.hidden = false;
+    return;
+  }
+
+  if (matchingResults.length === 0) {
+    summary.textContent = 'Tidak ada sponsor yang mencapai batas kecocokan 40%.';
+    emptyState.hidden = false;
+    return;
+  }
+
+  emptyState.hidden = true;
+  summary.textContent = `${matchingResults.length} sponsor paling relevan untuk acara kamu.`;
+  matchingResults.forEach(function (hasil) {
+    resultContainer.appendChild(buatKartuSponsor(hasil));
+  });
+}
+
 const menuToggle = document.querySelector('.menu-toggle');
 const mainNavigation = document.getElementById('main-navigation');
 
@@ -107,7 +257,7 @@ if (formProfilAcara && successMessage) {
     });
   });
 
-  formProfilAcara.addEventListener('submit', function (event) {
+  formProfilAcara.addEventListener('submit', async function (event) {
     event.preventDefault();
     let valid = true;
 
@@ -119,19 +269,53 @@ if (formProfilAcara && successMessage) {
       }
     });
 
-    if (valid) {
-      successMessage.textContent = 'Profil acara berhasil disimpan. Pencarian sponsor siap dilakukan.';
-      successMessage.hidden = false;
+    if (!valid) {
+      successMessage.hidden = true;
+      return;
+    }
+
+    const profilAcara = {
+      eventType: document.getElementById('jenis-acara').value,
+      location: document.getElementById('lokasi').value,
+      targetAudience: document.getElementById('target-peserta').value,
+      participants: Number(document.getElementById('jumlah-peserta').value),
+      funding: Number(document.getElementById('kebutuhan-dana').value)
+    };
+
+    successMessage.classList.remove('form-status-error');
+    successMessage.textContent = 'Mencari sponsor yang paling sesuai...';
+    successMessage.hidden = false;
+
+    try {
+      const response = await fetch('sponsors.json');
+      if (!response.ok) {
+        throw new Error('Data sponsor tidak dapat dimuat.');
+      }
+
+      const sponsors = await response.json();
+      const matchingResults = sponsors.map(function (sponsor) {
+        return hitungKecocokan(sponsor, profilAcara);
+      }).sort(function (a, b) {
+        return b.score - a.score;
+      });
+
+      sessionStorage.setItem('eventProfile', JSON.stringify(profilAcara));
+      sessionStorage.setItem('matchingResults', JSON.stringify(matchingResults));
+      successMessage.textContent = 'Pencocokan selesai. Membuka hasil...';
       formProfilAcara.reset();
       formProfilAcara.classList.remove('was-validated');
       formInputs.forEach(function (input) {
         hapusError(input.id);
       });
-    } else {
-      successMessage.hidden = true;
+      window.location.href = 'hasil-pencocokan.html';
+    } catch (error) {
+      successMessage.classList.add('form-status-error');
+      successMessage.textContent = error.message;
     }
   });
 }
+
+tampilkanHasilMatching();
 
 const profilForm = document.getElementById('profil-form');
 const tombolSimpan = document.getElementById('btn-simpan');

@@ -342,6 +342,12 @@ body {
   object-fit: contain;
 }
 
+.sponsor-logo-initials {
+  color: var(--forest-green);
+  font-size: 13px;
+  font-weight: 700;
+}
+
 .sponsor-logo-lg {
   width: 80px;
   height: 80px;
@@ -625,6 +631,28 @@ body {
   margin-left: 8px;
 }
 
+.sponsor-card-footer {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 16px;
+}
+
+.matching-empty {
+  max-width: 520px;
+  padding: 24px;
+  border: 1px solid var(--olive-green);
+  border-radius: 16px;
+  background: white;
+  color: var(--olive-green);
+  font-size: 13px;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.matching-empty .btn-primary {
+  margin-top: 20px;
+}
+
 /* Form & Input */
 .input-group {
   margin-bottom: 18px;
@@ -671,6 +699,12 @@ body {
   background: var(--match-bg);
   color: var(--match-green);
   font-size: 12px;
+}
+
+.success-message.form-status-error {
+  border-color: var(--not-fit-text);
+  background: var(--not-fit-bg);
+  color: var(--not-fit-text);
 }
 
 #formProfilAcara.was-validated input:valid,

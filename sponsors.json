@@ -1,0 +1,88 @@
+[
+  {
+    "id": "bca",
+    "name": "Bank Central Asia",
+    "category": "Banking",
+    "eventTypes": ["seminar", "social"],
+    "targetAudience": ["mahasiswa", "umum"],
+    "locations": ["Surabaya", "Sidoarjo", "Indonesia"],
+    "minParticipants": 50,
+    "maxParticipants": 500,
+    "fundingRange": {
+      "min": 5000000,
+      "max": 25000000
+    },
+    "description": "Mendukung kegiatan pendidikan, literasi, dan pengembangan komunitas.",
+    "contact": "partnership@bca.co.id",
+    "logo": "assets/bca.svg",
+    "detailPage": "detail-bca.html"
+  },
+  {
+    "id": "ruang-guru",
+    "name": "Ruang Guru",
+    "category": "Education",
+    "eventTypes": ["competition", "seminar"],
+    "targetAudience": ["siswa", "mahasiswa"],
+    "locations": ["Jakarta", "Indonesia"],
+    "minParticipants": 100,
+    "maxParticipants": 1000,
+    "fundingRange": {
+      "min": 2000000,
+      "max": 15000000
+    },
+    "description": "Berfokus pada kegiatan pendidikan, kompetisi pelajar, dan pengembangan kemampuan belajar.",
+    "contact": "partnership@ruangguru.com",
+    "logo": "assets/ruangguru.svg",
+    "detailPage": "detail-rg.html"
+  },
+  {
+    "id": "sig",
+    "name": "Semen Indonesia Grup",
+    "category": "Consumer",
+    "eventTypes": ["workshop", "social", "festival"],
+    "targetAudience": ["komunitas", "umum"],
+    "locations": ["Gresik", "Sidoarjo"],
+    "minParticipants": 20,
+    "maxParticipants": 300,
+    "fundingRange": {
+      "min": 1000000,
+      "max": 10000000
+    },
+    "description": "Mendukung pemberdayaan komunitas dan kegiatan sosial di sekitar wilayah operasional.",
+    "contact": "csr@sig.id",
+    "logo": "assets/sig.svg",
+    "detailPage": "detail-sig.html"
+  },
+  {
+    "id": "nusantara-digital",
+    "name": "Nusantara Digital",
+    "category": "Technology",
+    "eventTypes": ["workshop", "competition"],
+    "targetAudience": ["mahasiswa", "komunitas"],
+    "locations": ["Surabaya", "Sidoarjo"],
+    "minParticipants": 30,
+    "maxParticipants": 500,
+    "fundingRange": {
+      "min": 3000000,
+      "max": 20000000
+    },
+    "description": "Mendukung workshop teknologi dan kompetisi inovasi untuk talenta muda.",
+    "contact": "partner@nusantaradigital.id"
+  },
+  {
+    "id": "sahabat-retail",
+    "name": "Sahabat Retail",
+    "category": "Consumer",
+    "eventTypes": ["festival", "social"],
+    "targetAudience": ["umum", "komunitas"],
+    "locations": ["Surabaya", "Gresik"],
+    "minParticipants": 200,
+    "maxParticipants": 2000,
+    "fundingRange": {
+      "min": 5000000,
+      "max": 30000000
+    },
+    "description": "Berpartisipasi dalam festival publik dan program komunitas berskala menengah hingga besar.",
+    "contact": "sponsor@sahabatretail.id"
+  }
+]
