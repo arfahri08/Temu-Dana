@@ -83,14 +83,6 @@ body {
   flex-direction: column;
 }
 
-.status-bar {
-  padding: 14px 24px 0 24px;
-  font-size: 11px;
-  color: var(--olive-green);
-  font-weight: 700;
-  order: -3;
-}
-
 .app-header {
   width: 100%;
   padding: 12px 24px;
@@ -498,6 +490,11 @@ body {
   margin-bottom: 12px;
 }
 
+.hero-card .btn-primary {
+  margin-right: auto;
+  margin-left: auto;
+}
+
 /* Navigasi & Footer */
 .main-nav {
   display: none;
@@ -796,10 +793,6 @@ body {
 
 /* Breakpoint 1: Tablet (min-width: 768px) */
 @media (min-width: 768px) {
-  .status-bar {
-    display: none;
-  }
-
   .app-header {
     padding: 16px 32px;
   }
