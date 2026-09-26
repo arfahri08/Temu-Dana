@@ -1,6 +1,14 @@
-<!DOCTYPE html><html lang="id"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Profil Pengguna</title><link rel="stylesheet" href="style.css"></head><body>
+<!DOCTYPE html><html lang="id"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Profil Pengguna</title><link rel="icon" href="data:,"><link rel="stylesheet" href="style.css"><script src="script.js" defer></script></head><body>
 <div class="mobile-app">
   <div class="status-bar">9:41</div>
+  <header class="app-header">
+    <div class="app-header-inner">
+      <a href="index.html" class="brand-link">Temu Dana</a>
+      <button type="button" class="menu-toggle" aria-label="Buka navigasi" aria-controls="main-navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
   <main class="content">
     <header class="page-header page-header-mb">
       <h1 class="text-heading page-title">Profil Saya</h1>
@@ -17,21 +25,21 @@
     </section>
     <hr class="divider">
 
-    <form id="profil-form" onsubmit="return false;">
+    <form id="profil-form">
       <div class="input-group">
         <label for="nama">NAMA ORGANISASI</label>
-        <input type="text" id="nama" placeholder="Contoh: BEM Universitas" oninput="cekForm()">
+        <input type="text" id="nama" placeholder="Contoh: BEM Universitas">
       </div>
       <div class="input-group">
         <label for="kota">KOTA</label>
-        <input type="text" id="kota" placeholder="Contoh: Bandar Lampung" oninput="cekForm()">
+        <input type="text" id="kota" placeholder="Contoh: Bandar Lampung">
       </div>
       <div class="input-group">
         <label for="email">EMAIL</label>
-        <input type="email" id="email" placeholder="Contoh: uisi.event@organisasi.ac.id" oninput="cekForm()">
+        <input type="email" id="email" placeholder="Contoh: uisi.event@organisasi.ac.id">
       </div>
 
-      <button type="submit" class="btn-primary btn-mt" id="btn-simpan" disabled onclick="simpanProfil()">
+      <button type="submit" class="btn-primary btn-mt" id="btn-simpan" disabled>
         Simpan Profil
         <span class="btn-arrow">→</span>
       </button>
@@ -48,7 +56,7 @@
     <p class="footer-copy">&copy; 2026 PUA · ISE! Academy 2026</p>
   </footer>
 
-  <nav class="bottom-nav">
+  <nav class="main-nav" id="main-navigation" aria-label="Navigasi utama">
   <a href="index.html" class="nav-item">
     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg>
     Beranda
@@ -68,20 +76,4 @@
 </nav>
 </div>
 
-<script>
-  function cekForm() {
-    const nama  = document.getElementById('nama').value.trim();
-    const kota  = document.getElementById('kota').value.trim();
-    const email = document.getElementById('email').value.trim();
-    const btn   = document.getElementById('btn-simpan');
-    btn.disabled = !(nama && kota && email);
-  }
-
-  function simpanProfil() {
-    const nama  = document.getElementById('nama').value.trim();
-    const email = document.getElementById('email').value.trim();
-    document.getElementById('display-nama').textContent  = nama;
-    document.getElementById('display-email').textContent = email;
-  }
-</script>
 </body></html>

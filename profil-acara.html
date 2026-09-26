@@ -1,6 +1,14 @@
-<!DOCTYPE html><html lang="id"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Profil Acara</title><link rel="stylesheet" href="style.css"></head><body>
+<!DOCTYPE html><html lang="id"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Profil Acara</title><link rel="icon" href="data:,"><link rel="stylesheet" href="style.css"><script src="script.js" defer></script></head><body>
 <div class="mobile-app">
   <div class="status-bar">9:41</div>
+  <header class="app-header">
+    <div class="app-header-inner">
+      <a href="index.html" class="brand-link">Temu Dana</a>
+      <button type="button" class="menu-toggle" aria-label="Buka navigasi" aria-controls="main-navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
   <main class="content">
     <header class="page-header">
       <a href="index.html" class="back-btn" aria-label="Kembali ke Beranda">←</a>
@@ -8,17 +16,49 @@
     </header>
     <p class="text-body page-desc">Lengkapi informasi acara untuk menemukan sponsor.</p>
     
-    <form id="formProfilAcara" onsubmit="return false;">
-      <div class="input-group"><label>JENIS ACARA</label><input type="text" class="form-input" placeholder="Seminar / Workshop"></div>
-      <div class="input-group"><label>LOKASI</label><input type="text" class="form-input" placeholder="Bandar Lampung"></div>
-      <div class="input-group"><label>TARGET PESERTA</label><input type="text" class="form-input" placeholder="Mahasiswa"></div>
-      <div class="input-group"><label>JUMLAH PESERTA</label><input type="text" class="form-input" placeholder="300"></div>
-      <div class="input-group"><label>KEBUTUHAN DANA</label><input type="text" class="form-input" placeholder="Rp10.000.000"></div>
+    <form id="formProfilAcara" novalidate>
+      <div class="input-group">
+        <label for="jenis-acara">JENIS ACARA</label>
+        <select id="jenis-acara" name="jenis_acara" class="form-input" required>
+          <option value="">Pilih jenis acara</option>
+          <option value="seminar">Seminar</option>
+          <option value="workshop">Workshop</option>
+          <option value="kompetisi">Kompetisi</option>
+          <option value="konser">Konser</option>
+        </select>
+        <p class="error-message" id="error-jenis-acara"></p>
+      </div>
+      <div class="input-group">
+        <label for="lokasi">LOKASI</label>
+        <input type="text" id="lokasi" name="lokasi" class="form-input" placeholder="Bandar Lampung" required minlength="3" maxlength="60" pattern="[A-Za-zÀ-ÿ .'-]{3,60}" title="Gunakan 3–60 karakter berupa huruf, spasi, titik, apostrof, atau tanda hubung.">
+        <p class="error-message" id="error-lokasi"></p>
+      </div>
+      <div class="input-group">
+        <label for="target-peserta">TARGET PESERTA</label>
+        <input type="text" id="target-peserta" name="target_peserta" class="form-input" placeholder="Mahasiswa" required minlength="3" maxlength="50">
+        <p class="error-message" id="error-target-peserta"></p>
+      </div>
+      <div class="input-group">
+        <label for="email-kontak">EMAIL KONTAK</label>
+        <input type="email" id="email-kontak" name="email_kontak" class="form-input" placeholder="panitia@organisasi.ac.id" required maxlength="100">
+        <p class="error-message" id="error-email-kontak"></p>
+      </div>
+      <div class="input-group">
+        <label for="jumlah-peserta">JUMLAH PESERTA</label>
+        <input type="number" id="jumlah-peserta" name="jumlah_peserta" class="form-input" placeholder="300" required min="10" max="10000">
+        <p class="error-message" id="error-jumlah-peserta"></p>
+      </div>
+      <div class="input-group">
+        <label for="kebutuhan-dana">KEBUTUHAN DANA</label>
+        <input type="number" id="kebutuhan-dana" name="kebutuhan_dana" class="form-input" placeholder="10000000" required min="100000" max="1000000000" step="100000">
+        <p class="error-message" id="error-kebutuhan-dana"></p>
+      </div>
       
-      <button type="button" id="btnCariSponsor" class="btn-primary btn-mt" disabled>
+      <button type="submit" id="btnCariSponsor" class="btn-primary btn-mt">
         Cari Sponsor
         <span class="btn-arrow">→</span>
       </button>
+      <p class="success-message" id="formSuccess" role="status" hidden></p>
     </form>
     
     <section class="tips-box">
@@ -31,7 +71,7 @@
     <p class="footer-desc">Platform pencarian sponsor untuk kegiatan mahasiswa dan komunitas.</p>
     <p class="footer-copy">&copy; 2026 PUA · ISE! Academy 2026</p>
   </footer>
-  <nav class="bottom-nav">
+  <nav class="main-nav" id="main-navigation" aria-label="Navigasi utama">
   <a href="index.html" class="nav-item">
     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg>
     Beranda
@@ -51,33 +91,4 @@
 </nav>
 </div>
 
-<script>
-  const inputs = document.querySelectorAll('.form-input');
-  const btnCari = document.getElementById('btnCariSponsor');
-
-  function validateForm() {
-    let allFilled = true;
-    inputs.forEach(input => {
-      if (input.value.trim() === '') {
-        allFilled = false;
-      }
-    });
-
-    if (allFilled) {
-      btnCari.removeAttribute('disabled');
-    } else {
-      btnCari.setAttribute('disabled', 'true');
-    }
-  }
-
-  inputs.forEach(input => {
-    input.addEventListener('input', validateForm);
-  });
-
-  btnCari.addEventListener('click', function() {
-    if (!this.hasAttribute('disabled')) {
-      window.location.href = 'hasil-pencocokan.html';
-    }
-  });
-</script>
 </body></html>
