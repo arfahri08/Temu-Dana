@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="id"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Profil Pengguna</title><link rel="icon" href="data:,"><link rel="stylesheet" href="style.css"><script src="script.js" defer></script></head><body>
+<!DOCTYPE html><html lang="id"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Temu Dana - Profil Pengguna</title><meta name="description" content="Kelola informasi organisasi dan kontak pengguna Temu Dana."><link rel="icon" href="data:,"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="style.css"><script src="script.js" defer></script></head><body>
 <div class="mobile-app">
   <header class="app-header">
     <div class="app-header-inner">
@@ -14,7 +14,7 @@
     </header>
 
     <section class="profile-summary">
-      <div class="profile-avatar profile-avatar-large" aria-label="Profil pengguna">
+      <div class="profile-avatar profile-avatar-large" role="img" aria-label="Profil pengguna">
         <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
       </div>
       <div>
@@ -27,15 +27,15 @@
     <form id="profil-form">
       <div class="input-group">
         <label for="nama">NAMA ORGANISASI</label>
-        <input type="text" id="nama" placeholder="Contoh: BEM Universitas">
+        <input type="text" id="nama" name="nama" placeholder="Contoh: BEM Universitas" autocomplete="organization" required>
       </div>
       <div class="input-group">
         <label for="kota">KOTA</label>
-        <input type="text" id="kota" placeholder="Contoh: Bandar Lampung">
+        <input type="text" id="kota" name="kota" placeholder="Contoh: Bandar Lampung" autocomplete="address-level2" required>
       </div>
       <div class="input-group">
         <label for="email">EMAIL</label>
-        <input type="email" id="email" placeholder="Contoh: uisi.event@organisasi.ac.id">
+        <input type="email" id="email" name="email" placeholder="Contoh: uisi.event@organisasi.ac.id" autocomplete="email" required>
       </div>
 
       <button type="submit" class="btn-primary btn-mt" id="btn-simpan" disabled>
@@ -68,7 +68,7 @@
     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
     Riwayat
   </a>
-  <a href="profil.html" class="nav-item active">
+  <a href="profil.html" class="nav-item active" aria-current="page">
     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
     Profil
   </a>

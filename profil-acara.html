@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="id"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Profil Acara</title><link rel="icon" href="data:,"><link rel="stylesheet" href="style.css"><script src="script.js" defer></script></head><body>
+<!DOCTYPE html><html lang="id"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Temu Dana - Profil Acara</title><meta name="description" content="Lengkapi profil acara untuk mendapatkan rekomendasi sponsor yang relevan dengan kebutuhan kegiatanmu."><link rel="icon" href="data:,"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="style.css"><script src="script.js" defer></script></head><body>
 <div class="mobile-app">
   <header class="app-header">
     <div class="app-header-inner">
@@ -18,7 +18,7 @@
     <form id="formProfilAcara" novalidate>
       <div class="input-group">
         <label for="jenis-acara">JENIS ACARA</label>
-        <select id="jenis-acara" name="jenis_acara" class="form-input" required>
+        <select id="jenis-acara" name="jenis_acara" class="form-input" aria-describedby="error-jenis-acara" required>
           <option value="">Pilih jenis acara</option>
           <option value="seminar">Seminar</option>
           <option value="workshop">Workshop</option>
@@ -27,32 +27,32 @@
           <option value="festival">Festival</option>
           <option value="concert">Konser</option>
         </select>
-        <p class="error-message" id="error-jenis-acara"></p>
+        <p class="error-message" id="error-jenis-acara" aria-live="polite"></p>
       </div>
       <div class="input-group">
         <label for="lokasi">LOKASI</label>
-        <input type="text" id="lokasi" name="lokasi" class="form-input" placeholder="Bandar Lampung" required minlength="3" maxlength="60" pattern="[A-Za-zÀ-ÿ .'\-]{3,60}" title="Gunakan 3–60 karakter berupa huruf, spasi, titik, apostrof, atau tanda hubung.">
-        <p class="error-message" id="error-lokasi"></p>
+        <input type="text" id="lokasi" name="lokasi" class="form-input" placeholder="Bandar Lampung" aria-describedby="error-lokasi" required minlength="3" maxlength="60" pattern="[A-Za-zÀ-ÿ .'\-]{3,60}" title="Gunakan 3–60 karakter berupa huruf, spasi, titik, apostrof, atau tanda hubung.">
+        <p class="error-message" id="error-lokasi" aria-live="polite"></p>
       </div>
       <div class="input-group">
         <label for="target-peserta">TARGET PESERTA</label>
-        <input type="text" id="target-peserta" name="target_peserta" class="form-input" placeholder="Mahasiswa" required minlength="3" maxlength="50">
-        <p class="error-message" id="error-target-peserta"></p>
+        <input type="text" id="target-peserta" name="target_peserta" class="form-input" placeholder="Mahasiswa" aria-describedby="error-target-peserta" required minlength="3" maxlength="50">
+        <p class="error-message" id="error-target-peserta" aria-live="polite"></p>
       </div>
       <div class="input-group">
         <label for="email-kontak">EMAIL KONTAK</label>
-        <input type="email" id="email-kontak" name="email_kontak" class="form-input" placeholder="panitia@organisasi.ac.id" required maxlength="100">
-        <p class="error-message" id="error-email-kontak"></p>
+        <input type="email" id="email-kontak" name="email_kontak" class="form-input" placeholder="panitia@organisasi.ac.id" aria-describedby="error-email-kontak" autocomplete="email" required maxlength="100">
+        <p class="error-message" id="error-email-kontak" aria-live="polite"></p>
       </div>
       <div class="input-group">
         <label for="jumlah-peserta">JUMLAH PESERTA</label>
-        <input type="number" id="jumlah-peserta" name="jumlah_peserta" class="form-input" placeholder="300" required min="10" max="10000">
-        <p class="error-message" id="error-jumlah-peserta"></p>
+        <input type="number" id="jumlah-peserta" name="jumlah_peserta" class="form-input" placeholder="300" aria-describedby="error-jumlah-peserta" required min="10" max="10000">
+        <p class="error-message" id="error-jumlah-peserta" aria-live="polite"></p>
       </div>
       <div class="input-group">
         <label for="kebutuhan-dana">KEBUTUHAN DANA</label>
-        <input type="number" id="kebutuhan-dana" name="kebutuhan_dana" class="form-input" placeholder="10000000" required min="100000" max="1000000000" step="100000">
-        <p class="error-message" id="error-kebutuhan-dana"></p>
+        <input type="number" id="kebutuhan-dana" name="kebutuhan_dana" class="form-input" placeholder="10000000" aria-describedby="error-kebutuhan-dana" required min="100000" max="1000000000" step="100000">
+        <p class="error-message" id="error-kebutuhan-dana" aria-live="polite"></p>
       </div>
       
       <button type="submit" id="btnCariSponsor" class="btn-primary btn-mt">
@@ -77,7 +77,7 @@
     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg>
     Beranda
   </a>
-  <a href="profil-acara.html" class="nav-item active">
+  <a href="profil-acara.html" class="nav-item active" aria-current="page">
     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
     Cari Sponsor
   </a>

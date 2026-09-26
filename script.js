@@ -82,7 +82,10 @@ function buatKartuSponsor(hasil) {
   if (hasil.logo) {
     const image = document.createElement('img');
     image.src = hasil.logo;
-    image.alt = hasil.name;
+    image.alt = `Logo ${hasil.name}`;
+    image.width = 36;
+    image.height = 36;
+    image.decoding = 'async';
     logo.appendChild(image);
   } else {
     logo.classList.add('sponsor-logo-initials');
@@ -362,4 +365,10 @@ if (alertOverlay && closeAlertButton && closeAlertAction) {
 
   closeAlertButton.addEventListener('click', tutupAlert);
   closeAlertAction.addEventListener('click', tutupAlert);
+  alertOverlay.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape') {
+      tutupAlert();
+    }
+  });
+  closeAlertButton.focus();
 }
