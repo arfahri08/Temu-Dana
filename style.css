@@ -1,8 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
-/* ==========================================================================
-   1. COLOR PALETTE & CSS VARIABLES
-   ========================================================================== */
+/* Palet Warna & Variabel */
 :root {
   --forest-green: #173F35;
   --olive-green: #71866A;
@@ -15,9 +13,7 @@
   --bg-main: #F4EBDD;
 }
 
-/* ==========================================================================
-   2. GLOBAL RESET & TYPOGRAPHY
-   ========================================================================== */
+/* Reset & Tipografi */
 *, *::before, *::after {
   margin: 0;
   padding: 0;
@@ -48,6 +44,12 @@ body {
   line-height: 1.5;
 }
 
+.hero-desc,
+.page-desc,
+.detail-desc {
+  margin-bottom: 24px;
+}
+
 .section-tag {
   font-size: 10px;
   font-weight: 700;
@@ -73,9 +75,7 @@ body {
   margin-bottom: 16px;
 }
 
-/* ==========================================================================
-   3. CONTAINER & LAYOUT
-   ========================================================================== */
+/* Layout Utama */
 .mobile-app {
   width: 100%;
   max-width: 412px;
@@ -116,6 +116,10 @@ body {
   margin-bottom: 24px;
 }
 
+.page-header-mb {
+  margin-bottom: 24px;
+}
+
 .page-title {
   font-size: 20px;
 }
@@ -141,9 +145,7 @@ body {
   margin-bottom: 12px;
 }
 
-/* ==========================================================================
-   4. AVATARS & PROFILES
-   ========================================================================== */
+/* Profil & Avatar */
 .profile-avatar {
   border: 1.5px solid var(--forest-green);
   border-radius: 50%;
@@ -172,9 +174,16 @@ body {
   margin-bottom: 24px;
 }
 
-/* ==========================================================================
-   5. CARDS & LIST ITEMS
-   ========================================================================== */
+.profile-summary h2 {
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+
+.profile-summary p {
+  font-size: 12px;
+}
+
+/* Card & List Item */
 .card {
   background: white;
   border: 1px solid var(--olive-green);
@@ -231,7 +240,29 @@ body {
   font-weight: 700;
 }
 
-/* Sponsor List & Details */
+/* CSS Grid: Daftar Konten */
+.sponsor-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.sponsor-list .card {
+  margin-bottom: 0;
+}
+
+.history-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
+.history-list .history-item {
+  margin-bottom: 0;
+}
+
+/* Detail Sponsor */
 .sponsor-card-top {
   display: flex;
   justify-content: space-between;
@@ -303,6 +334,16 @@ body {
   margin-bottom: 24px;
 }
 
+.sponsor-detail-hero h2 {
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+
+.sponsor-detail-hero p {
+  font-size: 12px;
+  margin-bottom: 8px;
+}
+
 .spec-box {
   border: 1px solid var(--olive-green);
   border-radius: 12px;
@@ -358,21 +399,20 @@ body {
   line-height: 1.5;
 }
 
-/* ==========================================================================
-   6. BUTTONS
-   ========================================================================== */
+/* Tombol */
 .btn-primary {
   position: relative;
   background: var(--forest-green);
   color: white;
   border: none;
-  padding: 18px 56px 18px 24px;
+  padding: 18px 24px;
   border-radius: 12px;
   font-weight: 700;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
   cursor: pointer;
   text-decoration: none;
   font-size: 14px;
@@ -380,7 +420,7 @@ body {
   line-height: 1.2;
 }
 
-.btn-primary > span:last-child {
+.btn-arrow {
   position: absolute;
   right: 24px;
   font-weight: 400;
@@ -398,9 +438,15 @@ body {
   opacity: 0.7;
 }
 
-/* ==========================================================================
-   7. NAVIGATION & FOOTER
-   ========================================================================== */
+.btn-mt {
+  margin-top: 24px;
+}
+
+.btn-mb {
+  margin-bottom: 12px;
+}
+
+/* Navigasi & Footer */
 .bottom-nav {
   position: fixed;
   bottom: 0;
@@ -410,6 +456,7 @@ body {
   border-top: 1px solid var(--olive-green);
   display: flex;
   justify-content: space-around;
+  align-items: center;
   padding: 16px 0 24px 0;
   z-index: 10;
 }
@@ -421,6 +468,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   gap: 6px;
 }
 
@@ -430,7 +478,12 @@ body {
 }
 
 .app-footer {
-  padding: 16px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 20px 24px;
   text-align: center;
   margin-bottom: 74px;
   border-top: 1px solid rgba(113, 134, 106, 0.25);
@@ -440,13 +493,11 @@ body {
   font-weight: 700;
   font-size: 12px;
   color: var(--forest-green);
-  margin-bottom: 4px;
 }
 
 .footer-desc {
   font-size: 11px;
   color: var(--olive-green);
-  margin-bottom: 6px;
   line-height: 1.4;
 }
 
@@ -456,9 +507,7 @@ body {
   opacity: 0.8;
 }
 
-/* ==========================================================================
-   8. BADGES & CHECKLISTS
-   ========================================================================== */
+/* Badge & Checklist */
 .badge {
   padding: 6px 12px;
   border-radius: 16px;
@@ -492,6 +541,10 @@ body {
   font-size: 12px;
 }
 
+.list-check-detail {
+  margin-bottom: 40px;
+}
+
 .list-check li {
   display: flex;
   gap: 8px;
@@ -515,9 +568,7 @@ body {
   font-weight: 700;
 }
 
-/* ==========================================================================
-   9. INPUTS & FORMS
-   ========================================================================== */
+/* Form & Input */
 .input-group {
   margin-bottom: 18px;
 }
@@ -548,9 +599,7 @@ body {
   opacity: 0.6;
 }
 
-/* ==========================================================================
-   10. ALERTS & MODALS
-   ========================================================================== */
+/* Modal Alert & Catatan */
 .alert-overlay {
   position: fixed;
   top: 0;
@@ -576,6 +625,23 @@ body {
   position: relative;
 }
 
+.alert-title {
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+
+.alert-desc {
+  font-size: 13px;
+  margin-bottom: 24px;
+}
+
+.alert-divider {
+  border: 0;
+  border-top: 1px solid var(--olive-green);
+  margin-bottom: 24px;
+  opacity: 0.3;
+}
+
 .close-btn {
   position: absolute;
   top: 16px;
@@ -586,4 +652,167 @@ body {
   font-weight: 700;
   color: var(--forest-green);
   cursor: pointer;
+}
+
+.warning-note {
+  font-size: 10px;
+  color: var(--not-fit-text);
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.logout-wrap {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.logout-link {
+  font-size: 13px;
+  text-decoration: underline;
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN & MEDIA QUERIES
+   ========================================================================== */
+
+/* Breakpoint 1: Tablet (min-width: 768px) */
+@media (min-width: 768px) {
+  .mobile-app {
+    max-width: 720px;
+  }
+
+  .status-bar {
+    display: none;
+  }
+
+  .app-header {
+    order: -2;
+    padding: 16px 32px 0 32px;
+  }
+
+  .bottom-nav {
+    position: sticky;
+    top: 0;
+    bottom: auto;
+    order: -1;
+    max-width: 100%;
+    border-top: none;
+    border-bottom: 1px solid var(--olive-green);
+    padding: 14px 32px;
+    justify-content: center;
+    gap: 32px;
+    background: var(--bg-main);
+    z-index: 100;
+  }
+
+  .nav-item {
+    flex-direction: row;
+    font-size: 13px;
+    gap: 8px;
+  }
+
+  .content {
+    padding: 24px 32px 40px 32px;
+  }
+
+  .app-footer {
+    margin-bottom: 0;
+    padding: 28px 32px;
+  }
+
+  /* Grid: 2 Kolom Tablet */
+  .sponsor-list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .sponsor-list .card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .sponsor-list .list-check {
+    margin-top: auto;
+  }
+
+  .history-list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  /* Form & Detail Layout Tablet */
+  #formProfilAcara,
+  #profil-form,
+  .tips-box {
+    max-width: 560px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .sponsor-detail-hero,
+  .spec-box,
+  .detail-desc,
+  .detail-section-title,
+  .list-check-detail {
+    max-width: 600px;
+  }
+
+  .content > .btn-primary {
+    max-width: 600px;
+  }
+}
+
+/* Breakpoint 2: Desktop (min-width: 1024px) */
+@media (min-width: 1024px) {
+  .mobile-app {
+    max-width: 1040px;
+  }
+
+  .app-header {
+    padding: 20px 48px 0 48px;
+  }
+
+  .bottom-nav {
+    padding: 16px 48px;
+    justify-content: center;
+    gap: 48px;
+  }
+
+  .nav-item {
+    font-size: 14px;
+    gap: 10px;
+  }
+
+  .nav-item:hover {
+    color: var(--forest-green);
+  }
+
+  .content {
+    padding: 32px 48px 60px 48px;
+  }
+
+  .hero-title {
+    font-size: 42px;
+  }
+
+  .card .btn-primary {
+    max-width: 320px;
+  }
+
+  /* Grid: 3 Kolom Desktop untuk Sponsor Cards */
+  .sponsor-list {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+
+  .history-list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .app-footer {
+    padding: 36px 48px;
+    border-top: 1px solid rgba(113, 134, 106, 0.3);
+  }
 }

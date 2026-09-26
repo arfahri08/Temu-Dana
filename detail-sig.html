@@ -2,24 +2,24 @@
 <div class="mobile-app">
   <div class="status-bar">9:41</div>
   <main class="content">
-    <header class="page-header" style="margin-bottom: 24px;">
+    <header class="page-header page-header-mb">
       <a href="hasil-pencocokan.html" class="back-btn" aria-label="Kembali ke Hasil Pencocokan">←</a><h1 class="text-heading page-title">Detail Sponsor</h1>
     </header>
     
-    <section class="sponsor-header sponsor-detail-hero">
+    <section class="sponsor-detail-hero">
       <div class="sponsor-logo-lg">
         <img src="assets/sig.svg" alt="SIG">
       </div>
       <div>
-        <h2 class="text-heading" style="font-size: 16px; margin-bottom: 4px;">Semen Indonesia Grup</h2>
-        <p class="text-body" style="font-size: 12px; margin-bottom: 8px;">Material Bangunan</p>
+        <h2 class="text-heading">Semen Indonesia Grup</h2>
+        <p class="text-body">Material Bangunan</p>
         <span class="badge bg-tidak-cocok">0% Kecocokan</span>
       </div>
     </section>
     <hr class="divider">
 
     <h3 class="text-heading detail-section-title">Deskripsi Fokus Sponsor</h3>
-    <p class="text-body" style="margin-bottom: 24px;">Sponsor bergerak di bidang material bangunan dan mendukung kegiatan yang memiliki kesesuaian dengan fokus industri serta kebutuhan sponsor.</p>
+    <p class="text-body detail-desc">Sponsor bergerak di bidang material bangunan dan mendukung kegiatan yang memiliki kesesuaian dengan fokus industri serta kebutuhan sponsor.</p>
     
     <div class="spec-box">
       <div class="spec-row"><span class="spec-label">Industri Fokus</span><span class="spec-value">Material Bangunan</span></div>
@@ -28,27 +28,32 @@
     </div>
 
     <h3 class="text-heading detail-section-title">Alasan Kecocokan</h3>
-    <ul class="list-check" style="margin-bottom: 40px;">
+    <ul class="list-check list-check-detail">
       <li class="pos"><span>✓</span> Target peserta sesuai</li>
       <li class="neg"><span>✕</span> Kebutuhan sponsor tidak sesuai</li>
       <li class="neg"><span>✕</span> Jenis acara kurang sesuai</li>
     </ul>
 
-    <p class="text-heading" style="font-size: 10px; color: var(--not-fit-text); text-align: center; margin-bottom: 8px;">Sponsor ini tidak direkomendasikan</p>
-    <button class="btn-primary btn-center" disabled style="margin-bottom: 12px;">Pilih Sponsor</button>
-    <a href="index.html" class="btn-primary btn-center">Kembali ke Beranda</a>
+    <p class="text-heading warning-note">Sponsor ini tidak direkomendasikan</p>
+    <button class="btn-primary btn-mb" disabled>Pilih Sponsor</button>
+    <a href="index.html" class="btn-primary">Kembali ke Beranda</a>
   </main>
 
   <div class="alert-overlay">
     <div class="alert-box">
       <button type="button" class="close-btn" id="closeAlert">×</button>
-      <h2 class="text-heading" style="font-size: 20px; margin-bottom: 12px;">Sponsor Tidak Cocok</h2>
-      <p class="text-body" style="font-size: 13px; margin-bottom: 24px;">Sponsor ini tidak<br>direkomendasikan untuk acaramu.</p>
-      <hr style="border: 0; border-top: 1px solid var(--olive-green); margin-bottom: 24px; opacity: 0.3;">
-      <button type="button" class="btn-primary" id="closeAlertAction" style="justify-content: center;">Lihat Detail</button>
+      <h2 class="text-heading alert-title">Sponsor Tidak Cocok</h2>
+      <p class="text-body alert-desc">Sponsor ini tidak<br>direkomendasikan untuk acaramu.</p>
+      <hr class="alert-divider">
+      <button type="button" class="btn-primary" id="closeAlertAction">Lihat Detail</button>
     </div>
   </div>
   
+  <footer class="app-footer">
+    <p class="footer-title">Temu Dana</p>
+    <p class="footer-desc">Platform pencarian sponsor untuk kegiatan mahasiswa dan komunitas.</p>
+    <p class="footer-copy">&copy; 2026 PUA · ISE! Academy 2026</p>
+  </footer>
   <nav class="bottom-nav">
   <a href="index.html" class="nav-item">
     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg>

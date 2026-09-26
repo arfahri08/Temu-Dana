@@ -2,7 +2,7 @@
 <div class="mobile-app">
   <div class="status-bar">9:41</div>
   <main class="content">
-    <header class="page-header" style="margin-bottom: 24px;">
+    <header class="page-header page-header-mb">
       <h1 class="text-heading page-title">Profil Saya</h1>
     </header>
 
@@ -11,8 +11,8 @@
         <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
       </div>
       <div>
-        <h2 class="text-heading" style="font-size: 16px; margin-bottom: 4px;" id="display-nama">User Organisasi</h2>
-        <p class="text-body" style="font-size: 12px;" id="display-email">uisi.event@organisasi.ac.id</p>
+        <h2 class="text-heading" id="display-nama">User Organisasi</h2>
+        <p class="text-body" id="display-email">uisi.event@organisasi.ac.id</p>
       </div>
     </section>
     <hr class="divider">
@@ -31,17 +31,22 @@
         <input type="email" id="email" placeholder="Contoh: uisi.event@organisasi.ac.id" oninput="cekForm()">
       </div>
 
-      <button type="submit" class="btn-primary" id="btn-simpan" disabled style="justify-content: center; margin-top: 24px;" onclick="simpanProfil()">
-        <span style="width: 24px;"></span>
-        <span style="flex: 1; text-align: center;">Simpan Profil</span>
-        <span style="font-weight: normal; font-size: 18px;">→</span>
+      <button type="submit" class="btn-primary btn-mt" id="btn-simpan" disabled onclick="simpanProfil()">
+        Simpan Profil
+        <span class="btn-arrow">→</span>
       </button>
     </form>
 
-    <div style="text-align: center; margin-top: 20px;">
-      <a href="index.html" class="text-body" style="font-size: 13px; text-decoration: underline;">Keluar</a>
+    <div class="logout-wrap">
+      <a href="index.html" class="logout-link">Keluar</a>
     </div>
   </main>
+
+  <footer class="app-footer">
+    <p class="footer-title">Temu Dana</p>
+    <p class="footer-desc">Platform pencarian sponsor untuk kegiatan mahasiswa dan komunitas.</p>
+    <p class="footer-copy">&copy; 2026 PUA · ISE! Academy 2026</p>
+  </footer>
 
   <nav class="bottom-nav">
   <a href="index.html" class="nav-item">
